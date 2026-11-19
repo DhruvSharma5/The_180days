@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "backend/server.py": {
+      "maxDuration": 60,
+      "includeFiles": "backend/data/planner_roadmap.json"
+    }
+  },
+  "regions": ["bom1"],
+  "schedules": {
+    "daily-reminders": {
+      "schedule": "30 18 * * *",
+      "timezone": "Asia/Kolkata",
+      "path": "/api/cron/reminders",
+      "requestMethod": "GET"
+    }
+  }
+}

@@ -1,0 +1,7710 @@
+{
+ "source": "180_Day_DSA_MERN_Planner.pdf (Dhruv Sharma) \u2014 parsed verbatim",
+ "phases": {
+  "1": "Foundation: HTML, CSS, JavaScript, React",
+  "2": "Backend: Node, Express, MongoDB, Auth + Project 1",
+  "3": "Level-up: Next.js, DevOps, SQL, System Design + Project 2",
+  "4": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding",
+  "5": "Project 3, Behavioural and Mock Rounds",
+  "6": "Polish, Apply and Final Mock Loops"
+ },
+ "weekly_revision_items": [
+  {
+   "key": "redo6",
+   "title": "Redo the 6 toughest DSA problems of this week (no hints)"
+  },
+  {
+   "key": "pattern_notes",
+   "title": "Re-dry-run every pattern learned this week; update your pattern notes"
+  },
+  {
+   "key": "unsolved",
+   "title": "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)"
+  },
+  {
+   "key": "rebuild",
+   "title": "Rebuild one small thing from this week from scratch (no copy-paste)"
+  },
+  {
+   "key": "bugs",
+   "title": "Fix pending bugs / unfinished tasks and push to GitHub"
+  },
+  {
+   "key": "five_questions",
+   "title": "Write 5 interview questions from this week and answer them aloud"
+  },
+  {
+   "key": "mock45",
+   "title": "45-min timed self-mock (1 DSA problem + 10 concept questions), score 1-5"
+  }
+ ],
+ "projects": [
+  {
+   "key": "p1",
+   "title": "Project 1 \u2014 Full MERN App",
+   "description": "Full MERN app with auth, RBAC, deployment and a real-time feature (planner Days 46-55).",
+   "due_day": 55,
+   "milestones": [
+    "Project 1 - Plan & Design",
+    "Project 1 - Backend Core",
+    "Project 1 - Auth & Roles",
+    "Project 1 - Frontend Pages",
+    "Project 1 - Integration & State",
+    "Project 1 - Polish & Demo"
+   ]
+  },
+  {
+   "key": "p2",
+   "title": "Project 2 \u2014 TypeScript Capstone",
+   "description": "TypeScript capstone with Redis, queues, payments and CI/CD (planner Days 78-94, polish in Month 4).",
+   "due_day": 94,
+   "milestones": [
+    "Project 2 - Plan & Architecture",
+    "Project 2 - Backend Core",
+    "Project 2 - Auth & RBAC",
+    "Project 2 - Feature Set I",
+    "Project 2 - Feature Set II",
+    "Project 2 - Real-time & Payments",
+    "Project 2 - Frontend UI I",
+    "Project 2 - Frontend UI II",
+    "Project 2 - Integration & Bug-bash",
+    "Project 2 - UI/UX Polish",
+    "Project 2 - Tests & Monitoring",
+    "Project 2 - Deploy & Showcase"
+   ]
+  },
+  {
+   "key": "p3",
+   "title": "Project 3 \u2014 Unique Idea Build",
+   "description": "A small, unique idea built in 7 days \u2014 AI / real-time / productivity (planner Days 122-130).",
+   "due_day": 130,
+   "milestones": [
+    "Project 3 - Plan",
+    "Project 3 - Setup & Data Layer",
+    "Project 3 - Auth & Core API",
+    "Project 3 - Feature I",
+    "Project 3 - Feature II",
+    "Project 3 - Frontend",
+    "Project 3 - Integration & Tests",
+    "Project 3 - Deploy & Demo"
+   ]
+  }
+ ],
+ "interview_weeks": [
+  {
+   "week": 1,
+   "days": [
+    181,
+    187
+   ],
+   "focus": "Baseline: find real gaps",
+   "daily_mocks": "Mon-Sat: 1 DSA mock (2 problems, 45 min). Sun: full 4-round loop.",
+   "applications": "Fix top-5 gaps; apply to 5 roles/day; ask 3 referrals."
+  },
+  {
+   "week": 2,
+   "days": [
+    188,
+    194
+   ],
+   "focus": "Role-specific rounds",
+   "daily_mocks": "Mon JS, Tue React, Wed Node + DB, Thu System Design, Fri LLD / machine coding, Sat HR in English. Sun: full loop.",
+   "applications": "Tailor resume per role; 5 applications/day; 2 mock sessions with peers."
+  },
+  {
+   "week": 3,
+   "days": [
+    195,
+    201
+   ],
+   "focus": "Real interviews + drills",
+   "daily_mocks": "Mock the company's actual interview style (research on Glassdoor / LeetCode discuss). Sun: full loop.",
+   "applications": "Interview whenever called; debrief each real interview within 1 hour."
+  },
+  {
+   "week": 4,
+   "days": [
+    202,
+    208
+   ],
+   "focus": "Peak performance",
+   "daily_mocks": "2 full loops (Wed, Sun). Other days: weakest area drills.",
+   "applications": "Negotiation practice: salary, notice period, offer comparison."
+  }
+ ],
+ "interview_checklist": [
+  "Record every mock (audio is enough) and listen back for filler words and unclear explanations.",
+  "Think aloud: restate problem, examples, brute force, optimise, code, test, complexity.",
+  "Use a fresh question every time; never repeat a mock on the same prompt.",
+  "Rate with the rubric (page 3). Any score under 3 becomes tomorrow's drill.",
+  "Keep a 'real interview log': company, rounds, questions asked, what you missed.",
+  "Practise the HR round in English: pitch, STAR stories, career-switch story, salary talk."
+ ],
+ "interview_days": [
+  {
+   "day": 1,
+   "week": 1,
+   "title": "Interview Day 1 (Mon)",
+   "phase_name": "Week 1: Baseline: find real gaps",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "1 DSA mock (2 problems, 45 min)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Fix top-5 gaps; apply to 5 roles/day; ask 3 referrals.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "week": 1,
+   "title": "Interview Day 2 (Tue)",
+   "phase_name": "Week 1: Baseline: find real gaps",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "1 DSA mock (2 problems, 45 min)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Fix top-5 gaps; apply to 5 roles/day; ask 3 referrals.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "week": 1,
+   "title": "Interview Day 3 (Wed)",
+   "phase_name": "Week 1: Baseline: find real gaps",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "1 DSA mock (2 problems, 45 min)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Fix top-5 gaps; apply to 5 roles/day; ask 3 referrals.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "week": 1,
+   "title": "Interview Day 4 (Thu)",
+   "phase_name": "Week 1: Baseline: find real gaps",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "1 DSA mock (2 problems, 45 min)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Fix top-5 gaps; apply to 5 roles/day; ask 3 referrals.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "week": 1,
+   "title": "Interview Day 5 (Fri)",
+   "phase_name": "Week 1: Baseline: find real gaps",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "1 DSA mock (2 problems, 45 min)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Fix top-5 gaps; apply to 5 roles/day; ask 3 referrals.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "week": 1,
+   "title": "Interview Day 6 (Sat)",
+   "phase_name": "Week 1: Baseline: find real gaps",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "1 DSA mock (2 problems, 45 min)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Fix top-5 gaps; apply to 5 roles/day; ask 3 referrals.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "week": 1,
+   "title": "Interview Day 7 (Sun)",
+   "phase_name": "Week 1: Baseline: find real gaps",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Full 4-round loop mock",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Fix top-5 gaps; apply to 5 roles/day; ask 3 referrals.",
+     "kind": "practice"
+    },
+    {
+     "key": "i3",
+     "title": "Rate with the rubric (page 3). Any score under 3 becomes tomorrow's drill.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 8,
+   "week": 2,
+   "title": "Interview Day 8 (Mon)",
+   "phase_name": "Week 2: Role-specific rounds",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "JS mock interview",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Tailor resume per role; 5 applications/day; 2 mock sessions with peers.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 9,
+   "week": 2,
+   "title": "Interview Day 9 (Tue)",
+   "phase_name": "Week 2: Role-specific rounds",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "React mock interview",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Tailor resume per role; 5 applications/day; 2 mock sessions with peers.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 10,
+   "week": 2,
+   "title": "Interview Day 10 (Wed)",
+   "phase_name": "Week 2: Role-specific rounds",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Node + DB mock interview",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Tailor resume per role; 5 applications/day; 2 mock sessions with peers.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 11,
+   "week": 2,
+   "title": "Interview Day 11 (Thu)",
+   "phase_name": "Week 2: Role-specific rounds",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "System Design mock",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Tailor resume per role; 5 applications/day; 2 mock sessions with peers.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 12,
+   "week": 2,
+   "title": "Interview Day 12 (Fri)",
+   "phase_name": "Week 2: Role-specific rounds",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "LLD / machine coding mock",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Tailor resume per role; 5 applications/day; 2 mock sessions with peers.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 13,
+   "week": 2,
+   "title": "Interview Day 13 (Sat)",
+   "phase_name": "Week 2: Role-specific rounds",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "HR mock interview (in English)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Tailor resume per role; 5 applications/day; 2 mock sessions with peers.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 14,
+   "week": 2,
+   "title": "Interview Day 14 (Sun)",
+   "phase_name": "Week 2: Role-specific rounds",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Full interview loop",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Tailor resume per role; 5 applications/day; 2 mock sessions with peers.",
+     "kind": "practice"
+    },
+    {
+     "key": "i3",
+     "title": "Rate with the rubric (page 3). Any score under 3 becomes tomorrow's drill.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 15,
+   "week": 3,
+   "title": "Interview Day 15 (Mon)",
+   "phase_name": "Week 3: Real interviews + drills",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Mock the company's actual interview style (research on Glassdoor / LeetCode discuss)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Interview whenever called; debrief each real interview within 1 hour.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 16,
+   "week": 3,
+   "title": "Interview Day 16 (Tue)",
+   "phase_name": "Week 3: Real interviews + drills",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Mock the company's actual interview style (research on Glassdoor / LeetCode discuss)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Interview whenever called; debrief each real interview within 1 hour.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 17,
+   "week": 3,
+   "title": "Interview Day 17 (Wed)",
+   "phase_name": "Week 3: Real interviews + drills",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Mock the company's actual interview style (research on Glassdoor / LeetCode discuss)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Interview whenever called; debrief each real interview within 1 hour.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 18,
+   "week": 3,
+   "title": "Interview Day 18 (Thu)",
+   "phase_name": "Week 3: Real interviews + drills",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Mock the company's actual interview style (research on Glassdoor / LeetCode discuss)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Interview whenever called; debrief each real interview within 1 hour.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 19,
+   "week": 3,
+   "title": "Interview Day 19 (Fri)",
+   "phase_name": "Week 3: Real interviews + drills",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Mock the company's actual interview style (research on Glassdoor / LeetCode discuss)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Interview whenever called; debrief each real interview within 1 hour.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 20,
+   "week": 3,
+   "title": "Interview Day 20 (Sat)",
+   "phase_name": "Week 3: Real interviews + drills",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Mock the company's actual interview style (research on Glassdoor / LeetCode discuss)",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Interview whenever called; debrief each real interview within 1 hour.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 21,
+   "week": 3,
+   "title": "Interview Day 21 (Sun)",
+   "phase_name": "Week 3: Real interviews + drills",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Full interview loop",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Interview whenever called; debrief each real interview within 1 hour.",
+     "kind": "practice"
+    },
+    {
+     "key": "i3",
+     "title": "Rate with the rubric (page 3). Any score under 3 becomes tomorrow's drill.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 22,
+   "week": 4,
+   "title": "Interview Day 22 (Mon)",
+   "phase_name": "Week 4: Peak performance",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Weakest-area drill",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Negotiation practice: salary, notice period, offer comparison.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 23,
+   "week": 4,
+   "title": "Interview Day 23 (Tue)",
+   "phase_name": "Week 4: Peak performance",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Weakest-area drill",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Negotiation practice: salary, notice period, offer comparison.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 24,
+   "week": 4,
+   "title": "Interview Day 24 (Wed)",
+   "phase_name": "Week 4: Peak performance",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Full interview loop",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Negotiation practice: salary, notice period, offer comparison.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 25,
+   "week": 4,
+   "title": "Interview Day 25 (Thu)",
+   "phase_name": "Week 4: Peak performance",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Weakest-area drill",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Negotiation practice: salary, notice period, offer comparison.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 26,
+   "week": 4,
+   "title": "Interview Day 26 (Fri)",
+   "phase_name": "Week 4: Peak performance",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Weakest-area drill",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Negotiation practice: salary, notice period, offer comparison.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 27,
+   "week": 4,
+   "title": "Interview Day 27 (Sat)",
+   "phase_name": "Week 4: Peak performance",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Weakest-area drill",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Negotiation practice: salary, notice period, offer comparison.",
+     "kind": "practice"
+    }
+   ]
+  },
+  {
+   "day": 28,
+   "week": 4,
+   "title": "Interview Day 28 (Sun)",
+   "phase_name": "Week 4: Peak performance",
+   "tasks": [
+    {
+     "key": "i1",
+     "title": "Full interview loop",
+     "kind": "practice"
+    },
+    {
+     "key": "i2",
+     "title": "Applications & output: Negotiation practice: salary, notice period, offer comparison.",
+     "kind": "practice"
+    },
+    {
+     "key": "i3",
+     "title": "Rate with the rubric (page 3). Any score under 3 becomes tomorrow's drill.",
+     "kind": "practice"
+    }
+   ]
+  }
+ ],
+ "days": [
+  {
+   "day": 1,
+   "date_hint": "Mon, 09 Nov 2026",
+   "tag": "HTML",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 1,
+     "difficulty": "Easy",
+     "title": "Setup: pick DSA language, I/O, loops, functions + Big-O basics (concept)"
+    },
+    {
+     "num": 2,
+     "difficulty": "Easy",
+     "title": "Pattern 1: Solid Rectangle"
+    },
+    {
+     "num": 3,
+     "difficulty": "Easy",
+     "title": "Pattern 2: Right-Angled Triangle"
+    },
+    {
+     "num": 4,
+     "difficulty": "Easy",
+     "title": "Pattern 3: Number Triangle"
+    }
+   ],
+   "mern": [
+    {
+     "title": "HTML I - Foundations",
+     "bullets": [
+      "Setup VS Code, Live Server, DevTools, Emmet",
+      "Learn: doctype, head/body, headings, text tags, links, images, lists, tables",
+      "Build: personal profile page (no CSS yet)"
+     ]
+    }
+   ],
+   "revision": [
+    "Notes from earlier days",
+    "Flashcards / cheat sheet",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 2,
+   "date_hint": "Tue, 10 Nov 2026",
+   "tag": "HTML",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 5,
+     "difficulty": "Easy",
+     "title": "Pattern 4: Same-Number Triangle"
+    },
+    {
+     "num": 6,
+     "difficulty": "Easy",
+     "title": "Pattern 5: Inverted Triangle"
+    },
+    {
+     "num": 7,
+     "difficulty": "Easy",
+     "title": "Pattern 6: Inverted Number Triangle"
+    },
+    {
+     "num": 8,
+     "difficulty": "Easy",
+     "title": "Pattern 7: Star Pyramid"
+    }
+   ],
+   "mern": [
+    {
+     "title": "HTML II - Forms & Semantics",
+     "bullets": [
+      "Forms: input types, label, select, textarea, validation attributes",
+      "Semantic tags (header, nav, main, section, footer) + accessibility (alt, aria)",
+      "Build: registration form + semantic blog layout, meta/SEO tags"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 1 DSA (yesterday)",
+    "Flashcards / cheat sheet",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 3,
+   "date_hint": "Wed, 11 Nov 2026",
+   "tag": "CSS",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 9,
+     "difficulty": "Easy",
+     "title": "Pattern 8: Inverted Star Pyramid"
+    },
+    {
+     "num": 10,
+     "difficulty": "Easy",
+     "title": "Pattern 9: Diamond"
+    },
+    {
+     "num": 11,
+     "difficulty": "Easy",
+     "title": "Pattern 10: Half Diamond"
+    },
+    {
+     "num": 12,
+     "difficulty": "Easy",
+     "title": "Pattern 11: Binary Triangle"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CSS I - Selectors & Typography",
+     "bullets": [
+      "Selectors, specificity, cascade, inheritance",
+      "Units (px, rem, em, %, vw/vh), colors, fonts, Google Fonts",
+      "Style yesterday's profile page"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 2 DSA (yesterday)",
+    "Flashcards / cheat sheet",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 4,
+   "date_hint": "Thu, 12 Nov 2026",
+   "tag": "CSS",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 13,
+     "difficulty": "Easy",
+     "title": "Pattern 12: Number Crown"
+    },
+    {
+     "num": 14,
+     "difficulty": "Easy",
+     "title": "Pattern 13: Increasing Number Triangle"
+    },
+    {
+     "num": 15,
+     "difficulty": "Easy",
+     "title": "Pattern 14: Increasing Letter Triangle"
+    },
+    {
+     "num": 16,
+     "difficulty": "Easy",
+     "title": "Pattern 15: Reverse Letter Triangle"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CSS II - Box Model & Positioning",
+     "bullets": [
+      "Box model, margin collapse, display, overflow position: relative / absolute / fixed / sticky, z-index",
+      "Build: sticky navbar + card component"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 3 DSA (yesterday)",
+    "Flashcards / cheat sheet",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 5,
+   "date_hint": "Fri, 13 Nov 2026",
+   "tag": "CSS",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 17,
+     "difficulty": "Easy",
+     "title": "Pattern 16: Alpha-Ramp"
+    },
+    {
+     "num": 18,
+     "difficulty": "Easy",
+     "title": "Pattern 17: Alpha-Hill"
+    },
+    {
+     "num": 19,
+     "difficulty": "Easy",
+     "title": "Pattern 18: Alpha-Triangle"
+    },
+    {
+     "num": 20,
+     "difficulty": "Easy",
+     "title": "Pattern 19: Symmetric Void"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CSS III - Flexbox",
+     "bullets": [
+      "Main/cross axis, justify, align, wrap, gap, grow/shrink/basis",
+      "Build 5 layouts: navbar, card row, centered hero, sidebar, footer",
+      "Play Flexbox Froggy + write notes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 4 DSA (yesterday)",
+    "Flashcards / cheat sheet",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 6,
+   "date_hint": "Sat, 14 Nov 2026",
+   "tag": "CSS",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 21,
+     "difficulty": "Easy",
+     "title": "Pattern 20: Symmetric Butterfly"
+    },
+    {
+     "num": 22,
+     "difficulty": "Easy",
+     "title": "Pattern 21: Hollow Rectangle"
+    },
+    {
+     "num": 23,
+     "difficulty": "Easy",
+     "title": "Pattern 22: Number Spiral Pattern"
+    },
+    {
+     "num": 24,
+     "difficulty": "Easy",
+     "title": "Count Digits"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CSS IV - Grid",
+     "bullets": [
+      "grid-template, areas, auto-fit/auto-fill, minmax, gap",
+      "Flexbox vs Grid: when to use what",
+      "Build: dashboard / image gallery layout"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 5 DSA (yesterday)",
+    "Flashcards / cheat sheet",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 7,
+   "date_hint": "Sun, 15 Nov 2026",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 1 - 6",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 8,
+   "date_hint": "Mon, 16 Nov 2026",
+   "tag": "CSS",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 25,
+     "difficulty": "Easy",
+     "title": "Reverse a Number"
+    },
+    {
+     "num": 26,
+     "difficulty": "Easy",
+     "title": "Palindrome Number"
+    },
+    {
+     "num": 27,
+     "difficulty": "Easy",
+     "title": "GCD / HCF (Euclid)"
+    },
+    {
+     "num": 28,
+     "difficulty": "Easy",
+     "title": "Armstrong Number"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CSS V - Responsive Design",
+     "bullets": [
+      "Mobile-first, media queries, clamp(), responsive images",
+      "Pseudo-classes/elements, CSS variables, dark-mode toggle",
+      "Make yesterday's layout fully responsive"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 6 DSA (yesterday)",
+    "Day 1 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 9,
+   "date_hint": "Tue, 17 Nov 2026",
+   "tag": "CSS",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 29,
+     "difficulty": "Easy",
+     "title": "Print All Divisors"
+    },
+    {
+     "num": 30,
+     "difficulty": "Easy",
+     "title": "Check Prime"
+    },
+    {
+     "num": 31,
+     "difficulty": "Easy",
+     "title": "Print 1 to N and N to 1 (recursion)"
+    },
+    {
+     "num": 32,
+     "difficulty": "Easy",
+     "title": "Sum of First N (recursion)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CSS VI - Animations, Tailwind, Mini Project",
+     "bullets": [
+      "Transitions, transforms, keyframes, gradients, shadows",
+      "Tailwind CSS crash course: utilities, responsive prefixes",
+      "Project: responsive landing page, push to GitHub"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 8 DSA (yesterday)",
+    "Day 2 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 10,
+   "date_hint": "Wed, 18 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics",
+   "dsa": [
+    {
+     "num": 33,
+     "difficulty": "Easy",
+     "title": "Factorial (recursion)"
+    },
+    {
+     "num": 34,
+     "difficulty": "Easy",
+     "title": "Reverse an Array (recursion)"
+    },
+    {
+     "num": 35,
+     "difficulty": "Easy",
+     "title": "Palindrome String (recursion)"
+    },
+    {
+     "num": 36,
+     "difficulty": "Easy",
+     "title": "Fibonacci (recursion)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS I - Core Basics",
+     "bullets": [
+      "var/let/const, data types, coercion, operators, truthy/falsy",
+      "Conditionals, loops, switch, template literals",
+      "Solve 15 basic JS problems (FizzBuzz, palindrome...)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 9 DSA (yesterday)",
+    "Day 3 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 11,
+   "date_hint": "Thu, 19 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 1 Basics + Step 2 Sorting",
+   "dsa": [
+    {
+     "num": 37,
+     "difficulty": "Easy",
+     "title": "Hashing intro + Count Frequency of Elements"
+    },
+    {
+     "num": 38,
+     "difficulty": "Easy",
+     "title": "Highest & Lowest Frequency Element"
+    },
+    {
+     "num": 39,
+     "difficulty": "Easy",
+     "title": "Character Hashing (pre-compute)"
+    },
+    {
+     "num": 40,
+     "difficulty": "Easy",
+     "title": "Selection Sort"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS II - Functions & Scope",
+     "bullets": [
+      "Declarations vs expressions vs arrows, default/rest params",
+      "Scope, hoisting, TDZ, closures, IIFE, callbacks",
+      "Predict-the-output: 10 closure/hoisting questions"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 10 DSA (yesterday)",
+    "Day 4 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 12,
+   "date_hint": "Fri, 20 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 2 Sorting",
+   "dsa": [
+    {
+     "num": 41,
+     "difficulty": "Easy",
+     "title": "Bubble Sort"
+    },
+    {
+     "num": 42,
+     "difficulty": "Easy",
+     "title": "Insertion Sort"
+    },
+    {
+     "num": 43,
+     "difficulty": "Medium",
+     "title": "Merge Sort"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS III - Arrays & Strings",
+     "bullets": [
+      "Array methods: map, filter, reduce, find, some, every, sort, flat",
+      "String methods + regex basics",
+      "Practice: 15 array/string transformation problems"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 11 DSA (yesterday)",
+    "Day 5 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 13,
+   "date_hint": "Sat, 21 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 2 Sorting",
+   "dsa": [
+    {
+     "num": 44,
+     "difficulty": "Medium",
+     "title": "Quick Sort"
+    },
+    {
+     "num": 45,
+     "difficulty": "Easy",
+     "title": "Recursive Bubble Sort"
+    },
+    {
+     "num": 46,
+     "difficulty": "Easy",
+     "title": "Recursive Insertion Sort"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS IV - Objects & this",
+     "bullets": [
+      "Objects, destructuring, spread/rest, optional chaining, Map/Set this keyword, call/apply/bind, JSON",
+      "Practice: 10 'this' output questions"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 12 DSA (yesterday)",
+    "Day 6 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 14,
+   "date_hint": "Sun, 22 Nov 2026",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 8 - 13",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 15,
+   "date_hint": "Mon, 23 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 47,
+     "difficulty": "Easy",
+     "title": "Largest Element in Array"
+    },
+    {
+     "num": 48,
+     "difficulty": "Easy",
+     "title": "Second Largest Element"
+    },
+    {
+     "num": 49,
+     "difficulty": "Easy",
+     "title": "Check if Array is Sorted"
+    },
+    {
+     "num": 50,
+     "difficulty": "Easy",
+     "title": "Remove Duplicates from Sorted Array"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS V - DOM & Events",
+     "bullets": [
+      "Select/create/modify elements, classList, attributes",
+      "Events: bubbling, capturing, delegation, preventDefault",
+      "Build: Todo app with plain DOM"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 13 DSA (yesterday)",
+    "Day 8 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 16,
+   "date_hint": "Tue, 24 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 51,
+     "difficulty": "Easy",
+     "title": "Left Rotate Array by One"
+    },
+    {
+     "num": 52,
+     "difficulty": "Easy",
+     "title": "Left Rotate Array by D Places"
+    },
+    {
+     "num": 53,
+     "difficulty": "Easy",
+     "title": "Move Zeros to End"
+    },
+    {
+     "num": 54,
+     "difficulty": "Easy",
+     "title": "Linear Search"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS VI - Prototypes, Classes, Modules",
+     "bullets": [
+      "Prototype chain, constructor functions, classes, inheritance",
+      "Getters/setters, static, private fields, ES modules",
+      "Refactor Todo app using classes + modules"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 15 DSA (yesterday)",
+    "Day 9 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 17,
+   "date_hint": "Wed, 25 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 55,
+     "difficulty": "Easy",
+     "title": "Union of Two Sorted Arrays"
+    },
+    {
+     "num": 56,
+     "difficulty": "Easy",
+     "title": "Find Missing Number"
+    },
+    {
+     "num": 57,
+     "difficulty": "Easy",
+     "title": "Max Consecutive Ones"
+    },
+    {
+     "num": 58,
+     "difficulty": "Easy",
+     "title": "Single Number (XOR)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS VII - Async JavaScript",
+     "bullets": [
+      "Callbacks, Promises, async/await, error handling",
+      "Event loop, call stack, microtask vs macrotask queue",
+      "Practice: 10 async output-prediction questions"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 16 DSA (yesterday)",
+    "Day 10 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 18,
+   "date_hint": "Thu, 26 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 59,
+     "difficulty": "Easy",
+     "title": "Longest Subarray with Sum K (positives)"
+    },
+    {
+     "num": 60,
+     "difficulty": "Medium",
+     "title": "Longest Subarray with Sum K (pos + neg)"
+    },
+    {
+     "num": 61,
+     "difficulty": "Medium",
+     "title": "Two Sum"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS VIII - Fetch, HTTP & Storage",
+     "bullets": [
+      "HTTP methods, status codes, headers, REST, JSON fetch + async/await, loading and error states",
+      "Build: Weather/Movie search app with localStorage"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 17 DSA (yesterday)",
+    "Day 11 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 19,
+   "date_hint": "Fri, 27 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 62,
+     "difficulty": "Medium",
+     "title": "Sort 0s, 1s, 2s (Dutch Flag)"
+    },
+    {
+     "num": 63,
+     "difficulty": "Medium",
+     "title": "Majority Element (n/2)"
+    },
+    {
+     "num": 64,
+     "difficulty": "Medium",
+     "title": "Kadane: Maximum Subarray Sum"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS IX - Advanced Patterns",
+     "bullets": [
+      "Debounce, throttle, currying, memoization, compose",
+      "Polyfills: map, filter, reduce, bind, Promise.all",
+      "Machine coding: autocomplete + star rating"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 18 DSA (yesterday)",
+    "Day 12 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 20,
+   "date_hint": "Sat, 28 Nov 2026",
+   "tag": "JAVASCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 65,
+     "difficulty": "Medium",
+     "title": "Print Subarray with Max Sum"
+    },
+    {
+     "num": 66,
+     "difficulty": "Medium",
+     "title": "Best Time to Buy & Sell Stock"
+    },
+    {
+     "num": 67,
+     "difficulty": "Medium",
+     "title": "Rearrange Array by Sign (equal)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS X - Interview Sprint + Mini Project",
+     "bullets": [
+      "50 JS interview Q&A (theory + output based)",
+      "Mini project: Expense tracker (DOM + localStorage)",
+      "Write a one-page JS cheat sheet"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 19 DSA (yesterday)",
+    "Day 13 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 21,
+   "date_hint": "Sun, 29 Nov 2026",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 15 - 20",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 22,
+   "date_hint": "Mon, 30 Nov 2026",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 68,
+     "difficulty": "Medium",
+     "title": "Rearrange Array by Sign (unequal)"
+    },
+    {
+     "num": 69,
+     "difficulty": "Medium",
+     "title": "Next Permutation"
+    },
+    {
+     "num": 70,
+     "difficulty": "Medium",
+     "title": "Leaders in an Array"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React I - Foundations",
+     "bullets": [
+      "Vite setup, JSX, components, props, children",
+      "Conditional rendering, lists & keys",
+      "Build: product card list from static data"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 20 DSA (yesterday)",
+    "Day 15 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 23,
+   "date_hint": "Tue, 01 Dec 2026",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 71,
+     "difficulty": "Medium",
+     "title": "Longest Consecutive Sequence"
+    },
+    {
+     "num": 72,
+     "difficulty": "Medium",
+     "title": "Set Matrix Zeroes"
+    },
+    {
+     "num": 73,
+     "difficulty": "Medium",
+     "title": "Rotate Matrix by 90 Degrees"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React II - State & Events",
+     "bullets": [
+      "useState, event handling, controlled inputs, lifting state up",
+      "Forms with multi-field validation",
+      "Build: Todo + Counter apps in React"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 22 DSA (yesterday)",
+    "Day 16 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 24,
+   "date_hint": "Wed, 02 Dec 2026",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 74,
+     "difficulty": "Medium",
+     "title": "Spiral Matrix"
+    },
+    {
+     "num": 75,
+     "difficulty": "Medium",
+     "title": "Count Subarrays with Sum K"
+    },
+    {
+     "num": 76,
+     "difficulty": "Medium",
+     "title": "Pascal's Triangle (3 variants)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React III - useEffect & Data Fetching",
+     "bullets": [
+      "useEffect: deps, cleanup, lifecycle mapping",
+      "Fetch APIs, loading/error states, AbortController",
+      "Build: GitHub user search + custom hook useFetch"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 23 DSA (yesterday)",
+    "Day 17 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 25,
+   "date_hint": "Thu, 03 Dec 2026",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 77,
+     "difficulty": "Medium",
+     "title": "Majority Element II (n/3)"
+    },
+    {
+     "num": 78,
+     "difficulty": "Medium",
+     "title": "3Sum"
+    },
+    {
+     "num": 79,
+     "difficulty": "Medium",
+     "title": "4Sum"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React IV - Hooks Deep Dive & Context",
+     "bullets": [
+      "useRef, useMemo, useCallback, React.memo, useReducer",
+      "Context API: theme/auth provider",
+      "Refactor yesterday's app with Context + useReducer"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 24 DSA (yesterday)",
+    "Day 18 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 26,
+   "date_hint": "Fri, 04 Dec 2026",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 80,
+     "difficulty": "Medium",
+     "title": "Largest Subarray with Sum 0"
+    },
+    {
+     "num": 81,
+     "difficulty": "Medium",
+     "title": "Count Subarrays with XOR K"
+    },
+    {
+     "num": 82,
+     "difficulty": "Medium",
+     "title": "Merge Overlapping Intervals"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React V - Routing & Forms",
+     "bullets": [
+      "React Router v6: routes, nested, params, Outlet, protected routes",
+      "React Hook Form + Zod validation",
+      "Build: multi-page app with login screen (mock auth)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 25 DSA (yesterday)",
+    "Day 19 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 27,
+   "date_hint": "Sat, 05 Dec 2026",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 83,
+     "difficulty": "Medium",
+     "title": "Merge Sorted Arrays (no extra space)"
+    },
+    {
+     "num": 84,
+     "difficulty": "Medium",
+     "title": "Find Repeating & Missing Number"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React VI - Redux Toolkit",
+     "bullets": [
+      "Store, slices, reducers, createAsyncThunk useSelector / useDispatch, RTK patterns",
+      "Add cart (add/remove/qty) to your app using RTK"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 26 DSA (yesterday)",
+    "Day 20 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 28,
+   "date_hint": "Sun, 06 Dec 2026",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 22 - 27",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 29,
+   "date_hint": "Mon, 07 Dec 2026",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays",
+   "dsa": [
+    {
+     "num": 85,
+     "difficulty": "Hard",
+     "title": "Count Inversions"
+    },
+    {
+     "num": 86,
+     "difficulty": "Hard",
+     "title": "Reverse Pairs"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React VII - Tailwind, Performance, Structure",
+     "bullets": [
+      "Tailwind in React, reusable components, folder structure",
+      "Code splitting: lazy + Suspense, memoization, keys, reconciliation",
+      "Optimise app + add error boundary"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 27 DSA (yesterday)",
+    "Day 22 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 30,
+   "date_hint": "Tue, 08 Dec 2026",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 3 Arrays + Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 87,
+     "difficulty": "Medium",
+     "title": "Maximum Product Subarray"
+    },
+    {
+     "num": 88,
+     "difficulty": "Easy",
+     "title": "Binary Search (iterative + recursive)"
+    },
+    {
+     "num": 89,
+     "difficulty": "Easy",
+     "title": "Lower Bound"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Month-1 Project - React Front-end App",
+     "bullets": [
+      "Build: E-commerce / Movie app (Router + Redux + API + Tailwind)",
+      "Responsive, loading/error states, clean commits",
+      "Deploy on Vercel/Netlify + README"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 29 DSA (yesterday)",
+    "Day 23 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 1,
+   "phase_name": "Foundation: HTML, CSS, JavaScript, React"
+  },
+  {
+   "day": 31,
+   "date_hint": "Wed, 09 Dec 2026",
+   "tag": "GIT & GITHUB",
+   "is_sunday": false,
+   "dsa_header": "STEP REVIEW DAY - Step 3 Arrays",
+   "dsa": [],
+   "mern": [
+    {
+     "title": "Git & GitHub",
+     "bullets": [
+      "init, add, commit, branch, merge, rebase, stash",
+      "Resolve conflicts; .gitignore; PR workflow; commit conventions",
+      "Push all Month-1 projects with clean READMEs"
+     ]
+    }
+   ],
+   "revision": [
+    "Redo the 4 problems of this step that you struggled with",
+    "Solve 2 extra problems of this step from the official A2Z sheet (not listed here)",
+    "Write 5 lines: pattern + when to use it + complexity",
+    "Day 30 DSA (yesterday)",
+    "Day 24 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 32,
+   "date_hint": "Thu, 10 Dec 2026",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 90,
+     "difficulty": "Easy",
+     "title": "Upper Bound"
+    },
+    {
+     "num": 91,
+     "difficulty": "Easy",
+     "title": "Search Insert Position"
+    },
+    {
+     "num": 92,
+     "difficulty": "Easy",
+     "title": "Floor & Ceil in Sorted Array"
+    },
+    {
+     "num": 93,
+     "difficulty": "Easy",
+     "title": "First & Last Occurrence"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Node.js I - Runtime & Modules",
+     "bullets": [
+      "V8, event loop (libuv phases), non-blocking I/O",
+      "CommonJS vs ESM, npm, package.json, scripts",
+      "Build: CLI file-organiser using fs & path"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 31 DSA (yesterday)",
+    "Day 25 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 33,
+   "date_hint": "Fri, 11 Dec 2026",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 94,
+     "difficulty": "Easy",
+     "title": "Count Occurrences in Sorted Array"
+    },
+    {
+     "num": 95,
+     "difficulty": "Medium",
+     "title": "Search in Rotated Sorted Array I"
+    },
+    {
+     "num": 96,
+     "difficulty": "Medium",
+     "title": "Search in Rotated Sorted Array II"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Node.js II - Core Modules",
+     "bullets": [
+      "fs (sync/async/promises), path, os, events, buffers",
+      "Streams: readable/writable/pipe; http module server",
+      "Build: raw HTTP server with 3 routes (no Express)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 32 DSA (yesterday)",
+    "Day 26 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 34,
+   "date_hint": "Sat, 12 Dec 2026",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 97,
+     "difficulty": "Medium",
+     "title": "Minimum in Rotated Sorted Array"
+    },
+    {
+     "num": 98,
+     "difficulty": "Medium",
+     "title": "How Many Times Array is Rotated"
+    },
+    {
+     "num": 99,
+     "difficulty": "Medium",
+     "title": "Single Element in Sorted Array"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Express I - Basics",
+     "bullets": [
+      "Routing, req/res, middleware chain, static files, JSON parsing",
+      "Postman / Thunder Client, nodemon",
+      "Build: in-memory CRUD API"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 33 DSA (yesterday)",
+    "Day 27 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 35,
+   "date_hint": "Sun, 13 Dec 2026",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 29 - 34",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 36,
+   "date_hint": "Mon, 14 Dec 2026",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 100,
+     "difficulty": "Medium",
+     "title": "Find Peak Element"
+    },
+    {
+     "num": 101,
+     "difficulty": "Medium",
+     "title": "Square Root of N"
+    },
+    {
+     "num": 102,
+     "difficulty": "Medium",
+     "title": "Nth Root of M"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Express II - Structure & Errors",
+     "bullets": [
+      "Router, MVC folders, controllers/services",
+      "Central error handler, async wrapper, dotenv, CORS, Morgan",
+      "Refactor yesterday's API into MVC"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 34 DSA (yesterday)",
+    "Day 29 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 37,
+   "date_hint": "Tue, 15 Dec 2026",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 103,
+     "difficulty": "Medium",
+     "title": "Koko Eating Bananas"
+    },
+    {
+     "num": 104,
+     "difficulty": "Medium",
+     "title": "Minimum Days to Make M Bouquets"
+    },
+    {
+     "num": 105,
+     "difficulty": "Medium",
+     "title": "Smallest Divisor (Threshold)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "REST API Design",
+     "bullets": [
+      "CRUD conventions, status codes, versioning",
+      "Pagination, filtering, sorting, search",
+      "Validation with Zod/Joi; Swagger docs intro"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 36 DSA (yesterday)",
+    "Day 30 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 38,
+   "date_hint": "Wed, 16 Dec 2026",
+   "tag": "MONGODB",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 106,
+     "difficulty": "Medium",
+     "title": "Capacity to Ship Packages in D Days"
+    },
+    {
+     "num": 107,
+     "difficulty": "Medium",
+     "title": "Kth Missing Positive Number"
+    }
+   ],
+   "mern": [
+    {
+     "title": "MongoDB I - CRUD",
+     "bullets": [
+      "NoSQL vs SQL, documents, collections, Atlas setup",
+      "CRUD + operators ($gt, $in, $set, $push), projection, sort, limit",
+      "Practice: 25 queries on a sample dataset"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 37 DSA (yesterday)",
+    "Day 31 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 39,
+   "date_hint": "Thu, 17 Dec 2026",
+   "tag": "MONGODB",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 108,
+     "difficulty": "Hard",
+     "title": "Aggressive Cows"
+    },
+    {
+     "num": 109,
+     "difficulty": "Hard",
+     "title": "Book Allocation"
+    }
+   ],
+   "mern": [
+    {
+     "title": "MongoDB II - Aggregation & Design",
+     "bullets": [
+      "Aggregation: $match, $group, $project, $lookup, $unwind",
+      "Indexes (single, compound), explain(), embed vs reference",
+      "Practice: 10 aggregation pipelines"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 38 DSA (yesterday)",
+    "Day 32 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 40,
+   "date_hint": "Fri, 18 Dec 2026",
+   "tag": "MONGODB",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 110,
+     "difficulty": "Hard",
+     "title": "Split Array - Largest Sum"
+    },
+    {
+     "num": 111,
+     "difficulty": "Hard",
+     "title": "Painter's Partition"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Mongoose ODM",
+     "bullets": [
+      "Schemas, models, validation, defaults, timestamps",
+      "Middleware (pre/post), virtuals, statics/methods, populate",
+      "Connect Express API to MongoDB (real CRUD)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 39 DSA (yesterday)",
+    "Day 33 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 41,
+   "date_hint": "Sat, 19 Dec 2026",
+   "tag": "AUTH & SECURITY",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 112,
+     "difficulty": "Hard",
+     "title": "Minimize Max Distance to Gas Station"
+    },
+    {
+     "num": 113,
+     "difficulty": "Hard",
+     "title": "Median of Two Sorted Arrays"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Auth I - JWT",
+     "bullets": [
+      "Password hashing (bcrypt), register/login APIs",
+      "JWT access + refresh tokens, httpOnly cookies",
+      "Build: auth module with token refresh"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 40 DSA (yesterday)",
+    "Day 34 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 42,
+   "date_hint": "Sun, 20 Dec 2026",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 36 - 41",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 43,
+   "date_hint": "Mon, 21 Dec 2026",
+   "tag": "AUTH & SECURITY",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 114,
+     "difficulty": "Hard",
+     "title": "Kth Element of Two Sorted Arrays"
+    },
+    {
+     "num": 115,
+     "difficulty": "Medium",
+     "title": "Row with Maximum 1s"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Auth II - RBAC & OAuth",
+     "bullets": [
+      "Auth middleware, role-based access, protected routes",
+      "Sessions vs JWT, Google OAuth overview",
+      "Forgot/reset password with Nodemailer"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 41 DSA (yesterday)",
+    "Day 36 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 44,
+   "date_hint": "Tue, 22 Dec 2026",
+   "tag": "AUTH & SECURITY",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 116,
+     "difficulty": "Medium",
+     "title": "Search in 2D Matrix I"
+    },
+    {
+     "num": 117,
+     "difficulty": "Medium",
+     "title": "Search in 2D Matrix II"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Uploads & Security",
+     "bullets": [
+      "File uploads: Multer + Cloudinary/S3",
+      "Rate limiting, helmet, sanitisation, CORS config",
+      "OWASP basics: XSS, CSRF, NoSQL injection"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 43 DSA (yesterday)",
+    "Day 37 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 45,
+   "date_hint": "Wed, 23 Dec 2026",
+   "tag": "MERN INTEGRATION",
+   "is_sunday": false,
+   "dsa_header": "Step 4 Binary Search",
+   "dsa": [
+    {
+     "num": 118,
+     "difficulty": "Hard",
+     "title": "Find Peak Element II"
+    },
+    {
+     "num": 119,
+     "difficulty": "Hard",
+     "title": "Median of Row-wise Sorted Matrix"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Connect React with Express",
+     "bullets": [
+      "Axios, interceptors, env vars, CORS",
+      "Auth flow in React: login, token handling, protected routes",
+      "Connect Month-1 front-end to your own API"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 44 DSA (yesterday)",
+    "Day 38 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 46,
+   "date_hint": "Thu, 24 Dec 2026",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "STEP REVIEW DAY - Step 4 Binary Search",
+   "dsa": [],
+   "mern": [
+    {
+     "title": "Project 1 - Plan & Design",
+     "bullets": [
+      "Pick idea (Task manager / Blog / Expense app), list features",
+      "Design DB schema (ER diagram) + API contract",
+      "Create repo, folder structure, Kanban board"
+     ]
+    }
+   ],
+   "revision": [
+    "Redo the 4 problems of this step that you struggled with",
+    "Solve 2 extra problems of this step from the official A2Z sheet (not listed here)",
+    "Write 5 lines: pattern + when to use it + complexity",
+    "Day 45 DSA (yesterday)",
+    "Day 39 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 47,
+   "date_hint": "Fri, 25 Dec 2026",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 5 Strings",
+   "dsa": [
+    {
+     "num": 120,
+     "difficulty": "Easy",
+     "title": "Remove Outermost Parentheses"
+    },
+    {
+     "num": 121,
+     "difficulty": "Easy",
+     "title": "Reverse Words in a String"
+    },
+    {
+     "num": 122,
+     "difficulty": "Easy",
+     "title": "Largest Odd Number in String"
+    },
+    {
+     "num": 123,
+     "difficulty": "Easy",
+     "title": "Longest Common Prefix"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 1 - Backend Core",
+     "bullets": [
+      "Models, CRUD APIs, validation, error handling",
+      "Postman collection with all endpoints",
+      "Commit daily; write API README"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 46 DSA (yesterday)",
+    "Day 40 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 48,
+   "date_hint": "Sat, 26 Dec 2026",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 5 Strings",
+   "dsa": [
+    {
+     "num": 124,
+     "difficulty": "Easy",
+     "title": "Isomorphic Strings"
+    },
+    {
+     "num": 125,
+     "difficulty": "Easy",
+     "title": "Check if String is Rotation of Another"
+    },
+    {
+     "num": 126,
+     "difficulty": "Easy",
+     "title": "Valid Anagram"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 1 - Auth & Roles",
+     "bullets": [
+      "Register/login/logout/refresh, RBAC",
+      "Protected routes; user profile APIs",
+      "Test edge cases (invalid/expired token)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 47 DSA (yesterday)",
+    "Day 41 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 49,
+   "date_hint": "Sun, 27 Dec 2026",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 43 - 48",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 50,
+   "date_hint": "Mon, 28 Dec 2026",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 5 Strings",
+   "dsa": [
+    {
+     "num": 127,
+     "difficulty": "Medium",
+     "title": "Sort Characters by Frequency"
+    },
+    {
+     "num": 128,
+     "difficulty": "Easy",
+     "title": "Maximum Nesting Depth of Parentheses"
+    },
+    {
+     "num": 129,
+     "difficulty": "Easy",
+     "title": "Roman to Integer"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 1 - Frontend Pages",
+     "bullets": [
+      "Pages: auth, dashboard, list, details, forms",
+      "Reusable components + Tailwind UI",
+      "Responsive + loading/empty/error states"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 48 DSA (yesterday)",
+    "Day 43 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 51,
+   "date_hint": "Tue, 29 Dec 2026",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 5 Strings",
+   "dsa": [
+    {
+     "num": 130,
+     "difficulty": "Medium",
+     "title": "String to Integer (atoi)"
+    },
+    {
+     "num": 131,
+     "difficulty": "Medium",
+     "title": "Count and Say"
+    },
+    {
+     "num": 132,
+     "difficulty": "Medium",
+     "title": "Longest Palindromic Substring"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 1 - Integration & State",
+     "bullets": [
+      "Wire APIs via Axios; global state (Redux Toolkit/Context)",
+      "Optimistic updates, toasts, form errors",
+      "Bug-bash: test all flows end to end"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 50 DSA (yesterday)",
+    "Day 44 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 52,
+   "date_hint": "Wed, 30 Dec 2026",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 5 Strings + Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 133,
+     "difficulty": "Medium",
+     "title": "Sum of Beauty of All Substrings"
+    },
+    {
+     "num": 134,
+     "difficulty": "Medium",
+     "title": "Reverse Every Word in a String"
+    },
+    {
+     "num": 135,
+     "difficulty": "Easy",
+     "title": "Linked List: Traversal, Insert, Delete, Search"
+    }
+   ],
+   "mern": [
+    {
+     "title": "TanStack Query & RTK Query",
+     "bullets": [
+      "Query caching, mutations, invalidation, pagination",
+      "Refactor project data fetching to TanStack Query",
+      "Compare with RTK Query; note trade-offs"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 51 DSA (yesterday)",
+    "Day 45 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 53,
+   "date_hint": "Thu, 31 Dec 2026",
+   "tag": "MERN INTEGRATION",
+   "is_sunday": false,
+   "dsa_header": "Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 136,
+     "difficulty": "Easy",
+     "title": "Doubly Linked List: Insert, Delete, Reverse"
+    },
+    {
+     "num": 137,
+     "difficulty": "Easy",
+     "title": "Middle of Linked List"
+    },
+    {
+     "num": 138,
+     "difficulty": "Easy",
+     "title": "Reverse Linked List (iterative + recursive)"
+    },
+    {
+     "num": 139,
+     "difficulty": "Easy",
+     "title": "Merge Two Sorted Lists"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Testing Basics",
+     "bullets": [
+      "Jest + Supertest for 5 API routes",
+      "React Testing Library: 3 component tests",
+      "Postman tests; coverage report"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 52 DSA (yesterday)",
+    "Day 46 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 54,
+   "date_hint": "Fri, 01 Jan 2027",
+   "tag": "DEVOPS",
+   "is_sunday": false,
+   "dsa_header": "Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 140,
+     "difficulty": "Medium",
+     "title": "Detect a Loop in LL"
+    },
+    {
+     "num": 141,
+     "difficulty": "Medium",
+     "title": "Starting Point of Loop"
+    },
+    {
+     "num": 142,
+     "difficulty": "Medium",
+     "title": "Length of Loop"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Deployment",
+     "bullets": [
+      "Deploy API on Render/Railway, DB on Atlas, UI on Vercel",
+      "Env management, prod CORS, health check",
+      "Share live link + README screenshots"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 53 DSA (yesterday)",
+    "Day 47 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 55,
+   "date_hint": "Sat, 02 Jan 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 143,
+     "difficulty": "Medium",
+     "title": "Palindrome Linked List"
+    },
+    {
+     "num": 144,
+     "difficulty": "Medium",
+     "title": "Segregate Odd & Even Nodes"
+    },
+    {
+     "num": 145,
+     "difficulty": "Medium",
+     "title": "Remove Nth Node from End"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 1 - Polish & Demo",
+     "bullets": [
+      "Fix bugs, improve UX, add 2 wow features",
+      "Record a 2-minute demo video",
+      "Write resume bullets for the project (with metrics)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 54 DSA (yesterday)",
+    "Day 48 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 56,
+   "date_hint": "Sun, 03 Jan 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 50 - 55",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 57,
+   "date_hint": "Mon, 04 Jan 2027",
+   "tag": "TYPESCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 146,
+     "difficulty": "Medium",
+     "title": "Delete Middle Node"
+    },
+    {
+     "num": 147,
+     "difficulty": "Medium",
+     "title": "Sort a Linked List (Merge Sort)"
+    },
+    {
+     "num": 148,
+     "difficulty": "Medium",
+     "title": "Sort 0s, 1s, 2s in LL"
+    }
+   ],
+   "mern": [
+    {
+     "title": "TypeScript I",
+     "bullets": [
+      "Types, interfaces, unions, generics, enums, narrowing tsconfig, type vs interface, utility types",
+      "Convert 3 JS utilities to TS"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 55 DSA (yesterday)",
+    "Day 50 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 58,
+   "date_hint": "Tue, 05 Jan 2027",
+   "tag": "TYPESCRIPT",
+   "is_sunday": false,
+   "dsa_header": "Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 149,
+     "difficulty": "Medium",
+     "title": "Intersection of Two Linked Lists"
+    },
+    {
+     "num": 150,
+     "difficulty": "Medium",
+     "title": "Add 1 to a Number in LL"
+    },
+    {
+     "num": 151,
+     "difficulty": "Medium",
+     "title": "Add Two Numbers (LL)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "TypeScript II - React & Node",
+     "bullets": [
+      "Typing props, hooks, events in React",
+      "Typing Express req/res, Zod inference",
+      "Convert part of Project 1 backend to TS"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 57 DSA (yesterday)",
+    "Day 51 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 59,
+   "date_hint": "Wed, 06 Jan 2027",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 152,
+     "difficulty": "Medium",
+     "title": "Delete All Occurrences of Key in DLL"
+    },
+    {
+     "num": 153,
+     "difficulty": "Medium",
+     "title": "Find Pairs with Sum in Sorted DLL"
+    },
+    {
+     "num": 154,
+     "difficulty": "Medium",
+     "title": "Remove Duplicates from Sorted DLL"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Socket.io I - Real-time",
+     "bullets": [
+      "WebSockets vs polling vs SSE",
+      "Socket.io: events, rooms, broadcast",
+      "Build: basic chat server + client"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 58 DSA (yesterday)",
+    "Day 52 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 60,
+   "date_hint": "Thu, 07 Jan 2027",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 155,
+     "difficulty": "Hard",
+     "title": "Reverse Nodes in K-Group"
+    },
+    {
+     "num": 156,
+     "difficulty": "Medium",
+     "title": "Rotate List"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Socket.io II - Real-time Feature + Review",
+     "bullets": [
+      "Add live notifications / presence to Project 1",
+      "Handle reconnects, auth on sockets",
+      "Month-2 review: revise notes, fix backlog"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 59 DSA (yesterday)",
+    "Day 53 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 2,
+   "phase_name": "Backend: Node, Express, MongoDB, Auth + Project 1"
+  },
+  {
+   "day": 61,
+   "date_hint": "Fri, 08 Jan 2027",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 6 Linked List",
+   "dsa": [
+    {
+     "num": 157,
+     "difficulty": "Hard",
+     "title": "Flatten a Linked List"
+    },
+    {
+     "num": 158,
+     "difficulty": "Hard",
+     "title": "Clone LL with Random Pointer"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Next.js I - Routing & Rendering",
+     "bullets": [
+      "App router, layouts, server vs client components",
+      "SSR, SSG, ISR, CSR: when to use what",
+      "Build: blog with dynamic routes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 60 DSA (yesterday)",
+    "Day 54 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 62,
+   "date_hint": "Sat, 09 Jan 2027",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "STEP REVIEW DAY - Step 6 Linked List",
+   "dsa": [],
+   "mern": [
+    {
+     "title": "Next.js II - Data & Auth",
+     "bullets": [
+      "Data fetching, server actions, API routes",
+      "Auth with NextAuth; middleware; image optimisation",
+      "Deploy Next.js app on Vercel"
+     ]
+    }
+   ],
+   "revision": [
+    "Redo the 4 problems of this step that you struggled with",
+    "Solve 2 extra problems of this step from the official A2Z sheet (not listed here)",
+    "Write 5 lines: pattern + when to use it + complexity",
+    "Day 61 DSA (yesterday)",
+    "Day 55 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 63,
+   "date_hint": "Sun, 10 Jan 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 57 - 62",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 64,
+   "date_hint": "Mon, 11 Jan 2027",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 159,
+     "difficulty": "Medium",
+     "title": "Pow(x, n)"
+    },
+    {
+     "num": 160,
+     "difficulty": "Medium",
+     "title": "Count Good Numbers"
+    },
+    {
+     "num": 161,
+     "difficulty": "Medium",
+     "title": "Sort a Stack using Recursion"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Advanced React Patterns",
+     "bullets": [
+      "HOC, render props, compound components, hook patterns",
+      "Error boundaries, portals, Suspense",
+      "Build: reusable modal + dropdown + tabs"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 62 DSA (yesterday)",
+    "Day 57 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 65,
+   "date_hint": "Tue, 12 Jan 2027",
+   "tag": "REACT",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 162,
+     "difficulty": "Medium",
+     "title": "Reverse a Stack using Recursion"
+    },
+    {
+     "num": 163,
+     "difficulty": "Medium",
+     "title": "Generate Parentheses"
+    },
+    {
+     "num": 164,
+     "difficulty": "Easy",
+     "title": "Print All Subsequences"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React Performance",
+     "bullets": [
+      "React Profiler, re-render analysis, memoization pitfalls",
+      "Virtualization (react-window), lazy loading, Web Vitals",
+      "Lighthouse audit on Project 1, fix 3 issues"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 64 DSA (yesterday)",
+    "Day 58 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 66,
+   "date_hint": "Wed, 13 Jan 2027",
+   "tag": "DEVOPS",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 165,
+     "difficulty": "Medium",
+     "title": "Count Subsequences with Sum K"
+    },
+    {
+     "num": 166,
+     "difficulty": "Medium",
+     "title": "Power Set (Subsets)"
+    },
+    {
+     "num": 167,
+     "difficulty": "Medium",
+     "title": "Subsets II"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Docker Basics",
+     "bullets": [
+      "Images, containers, Dockerfile, volumes, networks docker-compose: Node + Mongo + Redis",
+      "Containerise Project 1"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 65 DSA (yesterday)",
+    "Day 59 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 67,
+   "date_hint": "Thu, 14 Jan 2027",
+   "tag": "DEVOPS",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 168,
+     "difficulty": "Medium",
+     "title": "Subset Sum I"
+    },
+    {
+     "num": 169,
+     "difficulty": "Medium",
+     "title": "Combination Sum I"
+    },
+    {
+     "num": 170,
+     "difficulty": "Medium",
+     "title": "Combination Sum II"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CI/CD & Nginx Basics",
+     "bullets": [
+      "GitHub Actions: lint, test, deploy pipeline",
+      "Reverse proxy, env secrets, PM2",
+      "Add CI to Project 1"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 66 DSA (yesterday)",
+    "Day 60 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 68,
+   "date_hint": "Fri, 15 Jan 2027",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 171,
+     "difficulty": "Medium",
+     "title": "Combination Sum III"
+    },
+    {
+     "num": 172,
+     "difficulty": "Medium",
+     "title": "Letter Combinations of Phone Number"
+    },
+    {
+     "num": 173,
+     "difficulty": "Medium",
+     "title": "Palindrome Partitioning"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Redis & Queues",
+     "bullets": [
+      "Caching patterns, TTL, sessions, rate-limit",
+      "BullMQ: background jobs (emails)",
+      "Add Redis cache to one slow endpoint"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 67 DSA (yesterday)",
+    "Day 61 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 69,
+   "date_hint": "Sat, 16 Jan 2027",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 174,
+     "difficulty": "Medium",
+     "title": "Permutations"
+    },
+    {
+     "num": 175,
+     "difficulty": "Hard",
+     "title": "Kth Permutation Sequence"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Payments & Integrations",
+     "bullets": [
+      "Razorpay/Stripe checkout + webhooks",
+      "Email/SMS, Google Maps API basics",
+      "Build: payment flow in test mode"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 68 DSA (yesterday)",
+    "Day 62 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 70,
+   "date_hint": "Sun, 17 Jan 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 64 - 69",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 71,
+   "date_hint": "Mon, 18 Jan 2027",
+   "tag": "SQL",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 176,
+     "difficulty": "Medium",
+     "title": "Word Search"
+    },
+    {
+     "num": 177,
+     "difficulty": "Hard",
+     "title": "N-Queens"
+    }
+   ],
+   "mern": [
+    {
+     "title": "SQL I - Basics to Joins",
+     "bullets": [
+      "SELECT, WHERE, GROUP BY, HAVING, ORDER BY",
+      "INNER/LEFT/RIGHT joins, subqueries",
+      "Solve 20 SQL problems"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 69 DSA (yesterday)",
+    "Day 64 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 72,
+   "date_hint": "Tue, 19 Jan 2027",
+   "tag": "SQL",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 178,
+     "difficulty": "Medium",
+     "title": "Rat in a Maze"
+    },
+    {
+     "num": 179,
+     "difficulty": "Medium",
+     "title": "M-Coloring Problem"
+    }
+   ],
+   "mern": [
+    {
+     "title": "SQL II - Advanced",
+     "bullets": [
+      "Indexing, normalisation, transactions, ACID",
+      "Window functions, CTEs; Postgres + Prisma intro",
+      "Solve 15 more SQL problems"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 71 DSA (yesterday)",
+    "Day 65 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 73,
+   "date_hint": "Wed, 20 Jan 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 7 Recursion & Backtracking",
+   "dsa": [
+    {
+     "num": 180,
+     "difficulty": "Hard",
+     "title": "Sudoku Solver"
+    },
+    {
+     "num": 181,
+     "difficulty": "Hard",
+     "title": "Expression Add Operators"
+    }
+   ],
+   "mern": [
+    {
+     "title": "System Design I - Fundamentals",
+     "bullets": [
+      "Client-server, HTTP, DNS, load balancers, reverse proxy",
+      "Caching, CDN, latency vs throughput",
+      "Draw the architecture of Project 1"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 72 DSA (yesterday)",
+    "Day 66 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 74,
+   "date_hint": "Thu, 21 Jan 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 8 Bit Manipulation & Maths",
+   "dsa": [
+    {
+     "num": 182,
+     "difficulty": "Easy",
+     "title": "Bit Basics: AND, OR, XOR, shifts (concept)"
+    },
+    {
+     "num": 183,
+     "difficulty": "Easy",
+     "title": "Check if i-th Bit is Set"
+    },
+    {
+     "num": 184,
+     "difficulty": "Easy",
+     "title": "Odd/Even & Power of 2"
+    },
+    {
+     "num": 185,
+     "difficulty": "Easy",
+     "title": "Count Set Bits"
+    }
+   ],
+   "mern": [
+    {
+     "title": "System Design II - Data & Scale",
+     "bullets": [
+      "SQL vs NoSQL, sharding, replication, CAP theorem",
+      "Message queues, microservices vs monolith",
+      "Design: URL shortener (HLD, 45 min)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 73 DSA (yesterday)",
+    "Day 67 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 75,
+   "date_hint": "Fri, 22 Jan 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 8 Bit Manipulation & Maths",
+   "dsa": [
+    {
+     "num": 186,
+     "difficulty": "Easy",
+     "title": "Set / Clear / Toggle i-th Bit"
+    },
+    {
+     "num": 187,
+     "difficulty": "Easy",
+     "title": "Remove Last Set Bit"
+    },
+    {
+     "num": 188,
+     "difficulty": "Easy",
+     "title": "Swap Two Numbers (XOR)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "LLD I - OOP & SOLID",
+     "bullets": [
+      "4 pillars of OOP, composition vs inheritance",
+      "SOLID with JS/TS examples",
+      "Refactor a messy class using SOLID"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 74 DSA (yesterday)",
+    "Day 68 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 76,
+   "date_hint": "Sat, 23 Jan 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 8 Bit Manipulation & Maths",
+   "dsa": [
+    {
+     "num": 189,
+     "difficulty": "Medium",
+     "title": "Divide Two Integers"
+    },
+    {
+     "num": 190,
+     "difficulty": "Easy",
+     "title": "Minimum Bit Flips (A to B)"
+    },
+    {
+     "num": 191,
+     "difficulty": "Medium",
+     "title": "Single Number II"
+    }
+   ],
+   "mern": [
+    {
+     "title": "LLD II - Design Patterns",
+     "bullets": [
+      "Singleton, Factory, Observer, Strategy, Decorator",
+      "Where patterns appear in Node/React",
+      "Implement 3 patterns in TS"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 75 DSA (yesterday)",
+    "Day 69 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 77,
+   "date_hint": "Sun, 24 Jan 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 71 - 76",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 78,
+   "date_hint": "Mon, 25 Jan 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 8 Bit Manipulation & Maths",
+   "dsa": [
+    {
+     "num": 192,
+     "difficulty": "Medium",
+     "title": "Single Number III"
+    },
+    {
+     "num": 193,
+     "difficulty": "Medium",
+     "title": "XOR of Numbers in Range L..R"
+    },
+    {
+     "num": 194,
+     "difficulty": "Medium",
+     "title": "Count Primes (Sieve)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Plan & Architecture",
+     "bullets": [
+      "Pick capstone: E-commerce / SaaS dashboard / Real-time collab app",
+      "Write PRD, ER diagram, API list, system diagram",
+      "Setup repo, CI, folder structure (TypeScript)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 76 DSA (yesterday)",
+    "Day 71 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 79,
+   "date_hint": "Tue, 26 Jan 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 8 Bit Manipulation & Maths + Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 195,
+     "difficulty": "Medium",
+     "title": "Prime Factorization (SPF)"
+    },
+    {
+     "num": 196,
+     "difficulty": "Medium",
+     "title": "Power Exponentiation (Binary Exp)"
+    },
+    {
+     "num": 197,
+     "difficulty": "Easy",
+     "title": "Implement Stack (Array)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Backend Core",
+     "bullets": [
+      "Models, services, controllers, Zod validation",
+      "Seed scripts, error handling, logging",
+      "Unit tests for services"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 78 DSA (yesterday)",
+    "Day 72 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 80,
+   "date_hint": "Wed, 27 Jan 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 198,
+     "difficulty": "Easy",
+     "title": "Implement Queue (Array)"
+    },
+    {
+     "num": 199,
+     "difficulty": "Easy",
+     "title": "Stack using Queues"
+    },
+    {
+     "num": 200,
+     "difficulty": "Easy",
+     "title": "Queue using Stacks"
+    },
+    {
+     "num": 201,
+     "difficulty": "Easy",
+     "title": "Stack & Queue using Linked List"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Auth & RBAC",
+     "bullets": [
+      "Auth with refresh tokens, roles/permissions",
+      "Email verification + password reset",
+      "Security checklist pass"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 79 DSA (yesterday)",
+    "Day 73 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 81,
+   "date_hint": "Thu, 28 Jan 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 202,
+     "difficulty": "Easy",
+     "title": "Valid Parentheses"
+    },
+    {
+     "num": 203,
+     "difficulty": "Medium",
+     "title": "Min Stack"
+    },
+    {
+     "num": 204,
+     "difficulty": "Medium",
+     "title": "Infix to Postfix"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Feature Set I",
+     "bullets": [
+      "Build core domain features end-to-end (API + UI)",
+      "Pagination, filters, search",
+      "Write tests for critical flows"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 80 DSA (yesterday)",
+    "Day 74 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 82,
+   "date_hint": "Fri, 29 Jan 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 205,
+     "difficulty": "Medium",
+     "title": "Prefix to Infix"
+    },
+    {
+     "num": 206,
+     "difficulty": "Medium",
+     "title": "Postfix to Prefix"
+    },
+    {
+     "num": 207,
+     "difficulty": "Medium",
+     "title": "Postfix to Infix & Prefix to Postfix"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Feature Set II",
+     "bullets": [
+      "Second set of features (orders / boards / comments)",
+      "Background jobs with BullMQ",
+      "Caching with Redis"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 81 DSA (yesterday)",
+    "Day 75 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 83,
+   "date_hint": "Sat, 30 Jan 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 208,
+     "difficulty": "Medium",
+     "title": "Infix to Prefix"
+    },
+    {
+     "num": 209,
+     "difficulty": "Medium",
+     "title": "Next Greater Element I"
+    },
+    {
+     "num": 210,
+     "difficulty": "Medium",
+     "title": "Next Greater Element II (circular)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Real-time & Payments",
+     "bullets": [
+      "Socket.io live updates / notifications",
+      "Payment flow (test mode) + webhooks",
+      "Handle failure and retry cases"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 82 DSA (yesterday)",
+    "Day 76 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 84,
+   "date_hint": "Sun, 31 Jan 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 78 - 83",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 85,
+   "date_hint": "Mon, 01 Feb 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 211,
+     "difficulty": "Medium",
+     "title": "Next Smaller Element"
+    },
+    {
+     "num": 212,
+     "difficulty": "Medium",
+     "title": "Trapping Rain Water"
+    },
+    {
+     "num": 213,
+     "difficulty": "Medium",
+     "title": "Sum of Subarray Minimums"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Frontend UI I",
+     "bullets": [
+      "Design system: buttons, inputs, modals, tables",
+      "Layouts, routing, auth screens",
+      "Responsive pass"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 83 DSA (yesterday)",
+    "Day 78 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 86,
+   "date_hint": "Tue, 02 Feb 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 214,
+     "difficulty": "Medium",
+     "title": "Asteroid Collision"
+    },
+    {
+     "num": 215,
+     "difficulty": "Medium",
+     "title": "Sum of Subarray Ranges"
+    },
+    {
+     "num": 216,
+     "difficulty": "Medium",
+     "title": "Remove K Digits"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Frontend UI II",
+     "bullets": [
+      "Dashboards/charts (Recharts), forms, optimistic UI",
+      "Accessibility, skeleton loaders, empty states",
+      "Performance pass (lazy load, memo)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 85 DSA (yesterday)",
+    "Day 79 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 87,
+   "date_hint": "Wed, 03 Feb 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 217,
+     "difficulty": "Hard",
+     "title": "Largest Rectangle in Histogram"
+    },
+    {
+     "num": 218,
+     "difficulty": "Hard",
+     "title": "Maximal Rectangle"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Integration & Bug-bash",
+     "bullets": [
+      "End-to-end flows; fix integration bugs",
+      "Add Playwright/Cypress smoke test",
+      "Freeze features; plan deployment"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 86 DSA (yesterday)",
+    "Day 80 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 88,
+   "date_hint": "Thu, 04 Feb 2027",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 219,
+     "difficulty": "Medium",
+     "title": "Stock Span Problem"
+    },
+    {
+     "num": 220,
+     "difficulty": "Medium",
+     "title": "Celebrity Problem"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Node Advanced",
+     "bullets": [
+      "Cluster, worker threads, streams in depth",
+      "Logging (winston/pino), PM2, graceful shutdown",
+      "Load-test an API (autocannon/k6)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 87 DSA (yesterday)",
+    "Day 81 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 89,
+   "date_hint": "Fri, 05 Feb 2027",
+   "tag": "NODE / EXPRESS",
+   "is_sunday": false,
+   "dsa_header": "Step 9 Stack & Queue",
+   "dsa": [
+    {
+     "num": 221,
+     "difficulty": "Hard",
+     "title": "LRU Cache"
+    },
+    {
+     "num": 222,
+     "difficulty": "Hard",
+     "title": "LFU Cache"
+    }
+   ],
+   "mern": [
+    {
+     "title": "API Advanced - GraphQL & Docs",
+     "bullets": [
+      "GraphQL basics: schema, queries, mutations, Apollo",
+      "REST vs GraphQL vs gRPC trade-offs",
+      "OpenAPI/Swagger docs for Project 2"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 88 DSA (yesterday)",
+    "Day 82 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 90,
+   "date_hint": "Sat, 06 Feb 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 10 Sliding Window & Two Pointers",
+   "dsa": [
+    {
+     "num": 223,
+     "difficulty": "Medium",
+     "title": "Longest Substring Without Repeating Characters"
+    },
+    {
+     "num": 224,
+     "difficulty": "Medium",
+     "title": "Max Consecutive Ones III"
+    },
+    {
+     "num": 225,
+     "difficulty": "Medium",
+     "title": "Fruit Into Baskets"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Month-3 Review & Timed Drill",
+     "bullets": [
+      "Re-read notes, fix backlog",
+      "Timed machine-coding drill: build a feature in 2 hours",
+      "Write 'what I know / what I fear' list for Month 4"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 89 DSA (yesterday)",
+    "Day 83 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 3,
+   "phase_name": "Level-up: Next.js, DevOps, SQL, System Design + Project 2"
+  },
+  {
+   "day": 91,
+   "date_hint": "Sun, 07 Feb 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 85 - 90",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 92,
+   "date_hint": "Mon, 08 Feb 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 10 Sliding Window & Two Pointers",
+   "dsa": [
+    {
+     "num": 226,
+     "difficulty": "Medium",
+     "title": "Longest Repeating Character Replacement"
+    },
+    {
+     "num": 227,
+     "difficulty": "Medium",
+     "title": "Binary Subarrays with Sum"
+    },
+    {
+     "num": 228,
+     "difficulty": "Medium",
+     "title": "Count Number of Nice Subarrays"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - UI/UX Polish",
+     "bullets": [
+      "Lighthouse + accessibility audit, fix issues",
+      "Mobile responsiveness, dark mode",
+      "Favicons, SEO meta, 404/error pages"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 90 DSA (yesterday)",
+    "Day 85 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 93,
+   "date_hint": "Tue, 09 Feb 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 10 Sliding Window & Two Pointers",
+   "dsa": [
+    {
+     "num": 229,
+     "difficulty": "Medium",
+     "title": "Substrings Containing All Three Characters"
+    },
+    {
+     "num": 230,
+     "difficulty": "Medium",
+     "title": "Maximum Points from Cards"
+    },
+    {
+     "num": 231,
+     "difficulty": "Medium",
+     "title": "Longest Substring with At Most K Distinct"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Tests & Monitoring",
+     "bullets": [
+      "Test coverage for core APIs (Jest/Supertest)",
+      "Sentry/logging, error tracking, health checks",
+      "Rate-limit + security headers"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 92 DSA (yesterday)",
+    "Day 86 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 94,
+   "date_hint": "Wed, 10 Feb 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 10 Sliding Window & Two Pointers",
+   "dsa": [
+    {
+     "num": 232,
+     "difficulty": "Hard",
+     "title": "Subarrays with K Different Integers"
+    },
+    {
+     "num": 233,
+     "difficulty": "Hard",
+     "title": "Minimum Window Substring"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 2 - Deploy & Showcase",
+     "bullets": [
+      "Dockerise + deploy with CI/CD",
+      "Custom domain, README with architecture diagram",
+      "Record 3-minute demo; add to portfolio"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 93 DSA (yesterday)",
+    "Day 87 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 95,
+   "date_hint": "Thu, 11 Feb 2027",
+   "tag": "CS CORE",
+   "is_sunday": false,
+   "dsa_header": "Step 10 Sliding Window & Two Pointers",
+   "dsa": [
+    {
+     "num": 234,
+     "difficulty": "Hard",
+     "title": "Minimum Window Subsequence"
+    },
+    {
+     "num": 235,
+     "difficulty": "Hard",
+     "title": "Sliding Window Maximum"
+    }
+   ],
+   "mern": [
+    {
+     "title": "OOP Interview Prep",
+     "bullets": [
+      "Encapsulation, inheritance, polymorphism, abstraction",
+      "Abstract class vs interface, overloading vs overriding",
+      "20 OOP Q&A + small design exercises"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 94 DSA (yesterday)",
+    "Day 88 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 96,
+   "date_hint": "Fri, 12 Feb 2027",
+   "tag": "CS CORE",
+   "is_sunday": false,
+   "dsa_header": "Step 11 Heaps",
+   "dsa": [
+    {
+     "num": 236,
+     "difficulty": "Easy",
+     "title": "Implement Min/Max Heap (Heapify)"
+    },
+    {
+     "num": 237,
+     "difficulty": "Easy",
+     "title": "Heap Sort"
+    },
+    {
+     "num": 238,
+     "difficulty": "Medium",
+     "title": "Kth Largest Element in Array"
+    }
+   ],
+   "mern": [
+    {
+     "title": "DBMS I",
+     "bullets": [
+      "ER model, keys, normalisation (1NF to BCNF)",
+      "ACID, transactions",
+      "20 Q&A + normalise 3 schemas"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 95 DSA (yesterday)",
+    "Day 89 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 97,
+   "date_hint": "Sat, 13 Feb 2027",
+   "tag": "CS CORE",
+   "is_sunday": false,
+   "dsa_header": "Step 11 Heaps",
+   "dsa": [
+    {
+     "num": 239,
+     "difficulty": "Medium",
+     "title": "Kth Smallest Element"
+    },
+    {
+     "num": 240,
+     "difficulty": "Medium",
+     "title": "Sort a K-Sorted Array"
+    },
+    {
+     "num": 241,
+     "difficulty": "Medium",
+     "title": "Merge K Sorted Lists"
+    }
+   ],
+   "mern": [
+    {
+     "title": "DBMS II",
+     "bullets": [
+      "Isolation levels, locking, deadlocks",
+      "Indexing (B+ tree), query optimisation basics",
+      "Solve 10 SQL interview queries"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 96 DSA (yesterday)",
+    "Day 90 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 98,
+   "date_hint": "Sun, 14 Feb 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 92 - 97",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 99,
+   "date_hint": "Mon, 15 Feb 2027",
+   "tag": "CS CORE",
+   "is_sunday": false,
+   "dsa_header": "Step 11 Heaps",
+   "dsa": [
+    {
+     "num": 242,
+     "difficulty": "Easy",
+     "title": "Replace Elements by Rank"
+    },
+    {
+     "num": 243,
+     "difficulty": "Medium",
+     "title": "Task Scheduler"
+    },
+    {
+     "num": 244,
+     "difficulty": "Medium",
+     "title": "Hands of Straights"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Operating Systems I",
+     "bullets": [
+      "Process vs thread, scheduling, context switch",
+      "IPC, system calls",
+      "20 Q&A + notes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 97 DSA (yesterday)",
+    "Day 92 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 100,
+   "date_hint": "Tue, 16 Feb 2027",
+   "tag": "CS CORE",
+   "is_sunday": false,
+   "dsa_header": "Step 11 Heaps",
+   "dsa": [
+    {
+     "num": 245,
+     "difficulty": "Medium",
+     "title": "Design Twitter"
+    },
+    {
+     "num": 246,
+     "difficulty": "Easy",
+     "title": "Connect N Ropes"
+    },
+    {
+     "num": 247,
+     "difficulty": "Easy",
+     "title": "Kth Largest Element in a Stream"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Operating Systems II",
+     "bullets": [
+      "Deadlock, memory management, paging, virtual memory",
+      "Synchronisation: mutex, semaphore",
+      "20 Q&A + notes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 99 DSA (yesterday)",
+    "Day 93 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 101,
+   "date_hint": "Wed, 17 Feb 2027",
+   "tag": "CS CORE",
+   "is_sunday": false,
+   "dsa_header": "Step 11 Heaps",
+   "dsa": [
+    {
+     "num": 248,
+     "difficulty": "Medium",
+     "title": "Maximum Sum Combination"
+    },
+    {
+     "num": 249,
+     "difficulty": "Hard",
+     "title": "Find Median from Data Stream"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Computer Networks I",
+     "bullets": [
+      "OSI vs TCP/IP, TCP vs UDP, 3-way handshake",
+      "DNS, HTTP/1.1, 2, 3",
+      "20 Q&A + notes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 100 DSA (yesterday)",
+    "Day 94 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 102,
+   "date_hint": "Thu, 18 Feb 2027",
+   "tag": "CS CORE",
+   "is_sunday": false,
+   "dsa_header": "Step 11 Heaps + Step 12 Greedy",
+   "dsa": [
+    {
+     "num": 250,
+     "difficulty": "Medium",
+     "title": "Top K Frequent Elements"
+    },
+    {
+     "num": 251,
+     "difficulty": "Easy",
+     "title": "Assign Cookies"
+    },
+    {
+     "num": 252,
+     "difficulty": "Easy",
+     "title": "Fractional Knapsack"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Computer Networks II",
+     "bullets": [
+      "HTTPS/TLS, cookies, sessions, CORS",
+      "WebSockets, CDN, load balancing",
+      "Explain 'what happens when you type a URL' aloud"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 101 DSA (yesterday)",
+    "Day 95 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 103,
+   "date_hint": "Fri, 19 Feb 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 12 Greedy",
+   "dsa": [
+    {
+     "num": 253,
+     "difficulty": "Easy",
+     "title": "Minimum Number of Coins"
+    },
+    {
+     "num": 254,
+     "difficulty": "Easy",
+     "title": "Lemonade Change"
+    },
+    {
+     "num": 255,
+     "difficulty": "Medium",
+     "title": "Valid Parenthesis String"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JavaScript Deep Dive I",
+     "bullets": [
+      "Execution context, call stack, hoisting, TDZ",
+      "Closures advanced, tricky event-loop outputs",
+      "25 output-based questions"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 102 DSA (yesterday)",
+    "Day 96 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 104,
+   "date_hint": "Sat, 20 Feb 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 12 Greedy",
+   "dsa": [
+    {
+     "num": 256,
+     "difficulty": "Medium",
+     "title": "Jump Game I"
+    },
+    {
+     "num": 257,
+     "difficulty": "Medium",
+     "title": "Jump Game II"
+    },
+    {
+     "num": 258,
+     "difficulty": "Medium",
+     "title": "N Meetings in One Room"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JavaScript Deep Dive II",
+     "bullets": [
+      "Promise.all/allSettled/race/any, async patterns",
+      "Generators, iterators, Proxy, Symbol, WeakMap",
+      "Implement Promise from scratch"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 103 DSA (yesterday)",
+    "Day 97 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 105,
+   "date_hint": "Sun, 21 Feb 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 99 - 104",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 106,
+   "date_hint": "Mon, 22 Feb 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 12 Greedy",
+   "dsa": [
+    {
+     "num": 259,
+     "difficulty": "Medium",
+     "title": "Job Sequencing Problem"
+    },
+    {
+     "num": 260,
+     "difficulty": "Hard",
+     "title": "Candy"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS Coding Round Practice",
+     "bullets": [
+      "20 polyfill/utility implementations (debounce, flatten, deepClone...)",
+      "Array/object manipulation problems",
+      "Time yourself: 30 min per set"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 104 DSA (yesterday)",
+    "Day 99 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 107,
+   "date_hint": "Tue, 23 Feb 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 12 Greedy",
+   "dsa": [
+    {
+     "num": 261,
+     "difficulty": "Easy",
+     "title": "Shortest Job First"
+    },
+    {
+     "num": 262,
+     "difficulty": "Medium",
+     "title": "Page Faults in LRU"
+    },
+    {
+     "num": 263,
+     "difficulty": "Medium",
+     "title": "Insert Interval"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React Interview I",
+     "bullets": [
+      "Virtual DOM, reconciliation, keys, batching",
+      "Hooks rules, controlled vs uncontrolled, refs",
+      "20 Q&A, explained aloud"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 106 DSA (yesterday)",
+    "Day 100 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 108,
+   "date_hint": "Wed, 24 Feb 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 12 Greedy + Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 264,
+     "difficulty": "Medium",
+     "title": "Non-overlapping Intervals"
+    },
+    {
+     "num": 265,
+     "difficulty": "Medium",
+     "title": "Minimum Platforms"
+    },
+    {
+     "num": 266,
+     "difficulty": "Easy",
+     "title": "Inorder Traversal"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React Interview II",
+     "bullets": [
+      "Custom hooks, Context vs Redux, SSR vs CSR",
+      "Performance optimisation, testing, error boundaries",
+      "20 Q&A + one live-coding task"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 107 DSA (yesterday)",
+    "Day 101 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 109,
+   "date_hint": "Thu, 25 Feb 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 267,
+     "difficulty": "Easy",
+     "title": "Preorder Traversal"
+    },
+    {
+     "num": 268,
+     "difficulty": "Easy",
+     "title": "Postorder Traversal"
+    },
+    {
+     "num": 269,
+     "difficulty": "Medium",
+     "title": "Level Order Traversal"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Node.js Interview",
+     "bullets": [
+      "Event loop phases, streams, cluster, middleware",
+      "Auth, error handling, scaling Node apps",
+      "40 Q&A rapid-fire"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 108 DSA (yesterday)",
+    "Day 102 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 110,
+   "date_hint": "Fri, 26 Feb 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 270,
+     "difficulty": "Easy",
+     "title": "Iterative Preorder"
+    },
+    {
+     "num": 271,
+     "difficulty": "Medium",
+     "title": "Iterative Inorder"
+    },
+    {
+     "num": 272,
+     "difficulty": "Medium",
+     "title": "Iterative Postorder (2 stacks / 1 stack)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "MongoDB & Express Interview",
+     "bullets": [
+      "Indexing, aggregation, schema design, transactions",
+      "REST best practices, security, pagination",
+      "30 Q&A + design a schema for an app"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 109 DSA (yesterday)",
+    "Day 103 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 111,
+   "date_hint": "Sat, 27 Feb 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 273,
+     "difficulty": "Medium",
+     "title": "Pre/In/Post in One Traversal"
+    },
+    {
+     "num": 274,
+     "difficulty": "Easy",
+     "title": "Maximum Depth of Binary Tree"
+    },
+    {
+     "num": 275,
+     "difficulty": "Easy",
+     "title": "Balanced Binary Tree"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Machine Coding I",
+     "bullets": [
+      "Timed 90 min: Todo with drag-and-drop",
+      "Timed 60 min: Infinite scroll / pagination",
+      "Self-review: code quality + edge cases"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 110 DSA (yesterday)",
+    "Day 104 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 112,
+   "date_hint": "Sun, 28 Feb 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 106 - 111",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 113,
+   "date_hint": "Mon, 01 Mar 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 276,
+     "difficulty": "Easy",
+     "title": "Diameter of Binary Tree"
+    },
+    {
+     "num": 277,
+     "difficulty": "Hard",
+     "title": "Binary Tree Maximum Path Sum"
+    },
+    {
+     "num": 278,
+     "difficulty": "Easy",
+     "title": "Same Tree"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Machine Coding II",
+     "bullets": [
+      "Timed: Autocomplete with debounce",
+      "Timed: Nested comments / file explorer",
+      "Self-review"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 111 DSA (yesterday)",
+    "Day 106 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 114,
+   "date_hint": "Tue, 02 Mar 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 279,
+     "difficulty": "Medium",
+     "title": "Zigzag Level Order"
+    },
+    {
+     "num": 280,
+     "difficulty": "Medium",
+     "title": "Boundary Traversal"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Machine Coding III",
+     "bullets": [
+      "Timed: Kanban board / Snake game",
+      "Timed: Chat UI / Stopwatch",
+      "Rate yourself 1-5 on each rubric item"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 113 DSA (yesterday)",
+    "Day 107 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 115,
+   "date_hint": "Wed, 03 Mar 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 281,
+     "difficulty": "Hard",
+     "title": "Vertical Order Traversal"
+    },
+    {
+     "num": 282,
+     "difficulty": "Medium",
+     "title": "Top View"
+    }
+   ],
+   "mern": [
+    {
+     "title": "System Design Practice I",
+     "bullets": [
+      "Design: URL shortener, rate limiter",
+      "Estimate load, choose DB, draw diagram",
+      "Explain aloud in 30 minutes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 114 DSA (yesterday)",
+    "Day 108 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 116,
+   "date_hint": "Thu, 04 Mar 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 283,
+     "difficulty": "Medium",
+     "title": "Bottom View"
+    },
+    {
+     "num": 284,
+     "difficulty": "Medium",
+     "title": "Left / Right Side View"
+    },
+    {
+     "num": 285,
+     "difficulty": "Easy",
+     "title": "Symmetric Binary Tree"
+    }
+   ],
+   "mern": [
+    {
+     "title": "System Design Practice II",
+     "bullets": [
+      "Design: chat app, notification service",
+      "Design: news feed",
+      "Explain trade-offs aloud"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 115 DSA (yesterday)",
+    "Day 109 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 117,
+   "date_hint": "Fri, 05 Mar 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 286,
+     "difficulty": "Medium",
+     "title": "Root-to-Node Path"
+    },
+    {
+     "num": 287,
+     "difficulty": "Medium",
+     "title": "Lowest Common Ancestor"
+    },
+    {
+     "num": 288,
+     "difficulty": "Medium",
+     "title": "Maximum Width of Binary Tree"
+    }
+   ],
+   "mern": [
+    {
+     "title": "LLD Practice I",
+     "bullets": [
+      "Design: parking lot, LRU cache",
+      "Class diagram + code skeleton in TS",
+      "Explain SOLID usage"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 116 DSA (yesterday)",
+    "Day 110 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 118,
+   "date_hint": "Sat, 06 Mar 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 289,
+     "difficulty": "Medium",
+     "title": "Children Sum Property"
+    },
+    {
+     "num": 290,
+     "difficulty": "Medium",
+     "title": "All Nodes at Distance K"
+    }
+   ],
+   "mern": [
+    {
+     "title": "LLD Practice II",
+     "bullets": [
+      "Design: tic-tac-toe, BookMyShow, logger",
+      "Apply patterns where natural",
+      "Self-review"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 117 DSA (yesterday)",
+    "Day 111 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 119,
+   "date_hint": "Sun, 07 Mar 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 113 - 118",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 120,
+   "date_hint": "Mon, 08 Mar 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 291,
+     "difficulty": "Hard",
+     "title": "Minimum Time to Burn Binary Tree"
+    },
+    {
+     "num": 292,
+     "difficulty": "Medium",
+     "title": "Count Nodes in Complete Binary Tree"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Month-4 Review",
+     "bullets": [
+      "Weak-topic remediation from your tracker",
+      "1 full timed self-mock (DSA + concepts)",
+      "Plan Month-5 targets"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 118 DSA (yesterday)",
+    "Day 113 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 4,
+   "phase_name": "Interview Core: CS Fundamentals, Deep Dives, Machine Coding"
+  },
+  {
+   "day": 121,
+   "date_hint": "Tue, 09 Mar 2027",
+   "tag": "CAREER",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 293,
+     "difficulty": "Medium",
+     "title": "Construct Tree from Preorder & Inorder"
+    },
+    {
+     "num": 294,
+     "difficulty": "Medium",
+     "title": "Construct Tree from Inorder & Postorder"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Resume, LinkedIn & GitHub",
+     "bullets": [
+      "ATS-friendly 1-page resume, project bullets with metrics",
+      "LinkedIn headline/about; GitHub pinned repos + READMEs",
+      "Get resume reviewed by 2 people"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 120 DSA (yesterday)",
+    "Day 114 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 122,
+   "date_hint": "Wed, 10 Mar 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees",
+   "dsa": [
+    {
+     "num": 295,
+     "difficulty": "Hard",
+     "title": "Serialize & Deserialize Binary Tree"
+    },
+    {
+     "num": 296,
+     "difficulty": "Medium",
+     "title": "Morris Inorder Traversal"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 3 - Plan",
+     "bullets": [
+      "Pick a unique idea (AI-powered / real-time / productivity)",
+      "Scope the MVP for 7 days; schema + API list",
+      "Setup repo + CI"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 121 DSA (yesterday)",
+    "Day 115 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 123,
+   "date_hint": "Thu, 11 Mar 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 13 Binary Trees + Step 14 Binary Search Trees",
+   "dsa": [
+    {
+     "num": 297,
+     "difficulty": "Medium",
+     "title": "Flatten Binary Tree to Linked List"
+    },
+    {
+     "num": 298,
+     "difficulty": "Easy",
+     "title": "Search in BST"
+    },
+    {
+     "num": 299,
+     "difficulty": "Medium",
+     "title": "Ceil & Floor in BST"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 3 - Setup & Data Layer",
+     "bullets": [
+      "Project skeleton, DB models, seed data",
+      "Base API + error handling",
+      "Commit + README skeleton"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 122 DSA (yesterday)",
+    "Day 116 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 124,
+   "date_hint": "Fri, 12 Mar 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 14 Binary Search Trees",
+   "dsa": [
+    {
+     "num": 300,
+     "difficulty": "Medium",
+     "title": "Insert into BST"
+    },
+    {
+     "num": 301,
+     "difficulty": "Medium",
+     "title": "Delete Node in BST"
+    },
+    {
+     "num": 302,
+     "difficulty": "Medium",
+     "title": "Kth Smallest / Largest in BST"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 3 - Auth & Core API",
+     "bullets": [
+      "Auth + roles",
+      "Core CRUD APIs",
+      "Postman tests"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 123 DSA (yesterday)",
+    "Day 117 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 125,
+   "date_hint": "Sat, 13 Mar 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 14 Binary Search Trees",
+   "dsa": [
+    {
+     "num": 303,
+     "difficulty": "Medium",
+     "title": "Validate BST"
+    },
+    {
+     "num": 304,
+     "difficulty": "Medium",
+     "title": "LCA of BST"
+    },
+    {
+     "num": 305,
+     "difficulty": "Medium",
+     "title": "Construct BST from Preorder"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 3 - Feature I",
+     "bullets": [
+      "Build the main feature end to end",
+      "Edge cases + validation",
+      "Basic tests"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 124 DSA (yesterday)",
+    "Day 118 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 126,
+   "date_hint": "Sun, 14 Mar 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 120 - 125",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 127,
+   "date_hint": "Mon, 15 Mar 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 14 Binary Search Trees",
+   "dsa": [
+    {
+     "num": 306,
+     "difficulty": "Medium",
+     "title": "Inorder Successor & Predecessor"
+    },
+    {
+     "num": 307,
+     "difficulty": "Medium",
+     "title": "BST Iterator"
+    },
+    {
+     "num": 308,
+     "difficulty": "Medium",
+     "title": "Two Sum IV (BST)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 3 - Feature II",
+     "bullets": [
+      "Build the second feature end to end",
+      "Integrations (payments/AI/maps etc.)",
+      "Basic tests"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 125 DSA (yesterday)",
+    "Day 120 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 128,
+   "date_hint": "Tue, 16 Mar 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 14 Binary Search Trees",
+   "dsa": [
+    {
+     "num": 309,
+     "difficulty": "Hard",
+     "title": "Recover BST"
+    },
+    {
+     "num": 310,
+     "difficulty": "Hard",
+     "title": "Largest BST in Binary Tree"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 3 - Frontend",
+     "bullets": [
+      "Polish UI, responsive layout, loading states",
+      "Accessibility basics",
+      "Performance pass"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 127 DSA (yesterday)",
+    "Day 121 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 129,
+   "date_hint": "Wed, 17 Mar 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 311,
+     "difficulty": "Easy",
+     "title": "Graph Representation (Adj List/Matrix)"
+    },
+    {
+     "num": 312,
+     "difficulty": "Easy",
+     "title": "BFS Traversal"
+    },
+    {
+     "num": 313,
+     "difficulty": "Easy",
+     "title": "DFS Traversal"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 3 - Integration & Tests",
+     "bullets": [
+      "End-to-end testing, bug fixes",
+      "Logging + monitoring",
+      "Freeze features"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 128 DSA (yesterday)",
+    "Day 122 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 130,
+   "date_hint": "Thu, 18 Mar 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 314,
+     "difficulty": "Medium",
+     "title": "Number of Provinces"
+    },
+    {
+     "num": 315,
+     "difficulty": "Medium",
+     "title": "Number of Islands"
+    },
+    {
+     "num": 316,
+     "difficulty": "Medium",
+     "title": "Flood Fill"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Project 3 - Deploy & Demo",
+     "bullets": [
+      "Deploy with CI/CD",
+      "README + architecture diagram",
+      "Record demo; add to portfolio and resume"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 129 DSA (yesterday)",
+    "Day 123 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 131,
+   "date_hint": "Fri, 19 Mar 2027",
+   "tag": "CAREER",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 317,
+     "difficulty": "Medium",
+     "title": "Rotten Oranges"
+    },
+    {
+     "num": 318,
+     "difficulty": "Medium",
+     "title": "Detect Cycle in Undirected Graph"
+    },
+    {
+     "num": 319,
+     "difficulty": "Medium",
+     "title": "01 Matrix"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Behavioural I - STAR Stories",
+     "bullets": [
+      "Tell me about yourself (90-second pitch)",
+      "Prepare 6 STAR stories (conflict, failure, ownership...)",
+      "Record yourself answering 5 questions"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 130 DSA (yesterday)",
+    "Day 124 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 132,
+   "date_hint": "Sat, 20 Mar 2027",
+   "tag": "CAREER",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 320,
+     "difficulty": "Medium",
+     "title": "Surrounded Regions"
+    },
+    {
+     "num": 321,
+     "difficulty": "Medium",
+     "title": "Number of Enclaves"
+    },
+    {
+     "num": 322,
+     "difficulty": "Medium",
+     "title": "Word Ladder I"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Behavioural II - Your Career Story",
+     "bullets": [
+      "Why move from support to development? Honest, positive story",
+      "Strengths, weaknesses, 5-year goal, salary-talk basics",
+      "Practise aloud in English with Claude"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 131 DSA (yesterday)",
+    "Day 125 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 133,
+   "date_hint": "Sun, 21 Mar 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 127 - 132",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 134,
+   "date_hint": "Mon, 22 Mar 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 323,
+     "difficulty": "Hard",
+     "title": "Word Ladder II"
+    },
+    {
+     "num": 324,
+     "difficulty": "Medium",
+     "title": "Number of Distinct Islands"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Revision - JavaScript",
+     "bullets": [
+      "Re-read cheat sheet; redo 20 hardest output questions",
+      "Re-implement 5 polyfills from memory",
+      "Fix weak spots"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 132 DSA (yesterday)",
+    "Day 127 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 135,
+   "date_hint": "Tue, 23 Mar 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 325,
+     "difficulty": "Medium",
+     "title": "Is Graph Bipartite"
+    },
+    {
+     "num": 326,
+     "difficulty": "Medium",
+     "title": "Detect Cycle in Directed Graph"
+    },
+    {
+     "num": 327,
+     "difficulty": "Medium",
+     "title": "Topological Sort (DFS)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Revision - React",
+     "bullets": [
+      "Hooks, Context, Redux, performance notes",
+      "Rebuild one small app from scratch in 90 minutes",
+      "Fix weak spots"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 134 DSA (yesterday)",
+    "Day 128 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 136,
+   "date_hint": "Wed, 24 Mar 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 328,
+     "difficulty": "Medium",
+     "title": "Kahn's Algorithm (BFS Topo Sort)"
+    },
+    {
+     "num": 329,
+     "difficulty": "Medium",
+     "title": "Course Schedule I & II"
+    },
+    {
+     "num": 330,
+     "difficulty": "Medium",
+     "title": "Find Eventual Safe States"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Revision - Node, Express & MongoDB",
+     "bullets": [
+      "Middleware, auth, error handling notes",
+      "Rebuild a CRUD + auth API from scratch",
+      "Aggregation + indexing recap"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 135 DSA (yesterday)",
+    "Day 129 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 137,
+   "date_hint": "Thu, 25 Mar 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 331,
+     "difficulty": "Hard",
+     "title": "Alien Dictionary"
+    },
+    {
+     "num": 332,
+     "difficulty": "Medium",
+     "title": "Shortest Path in UG (Unit Weights)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Revision - CS Core",
+     "bullets": [
+      "OS + DBMS cheat sheets",
+      "CN + OOP cheat sheets",
+      "30 rapid-fire Q&A"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 136 DSA (yesterday)",
+    "Day 130 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 138,
+   "date_hint": "Fri, 26 Mar 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 333,
+     "difficulty": "Medium",
+     "title": "Shortest Path in DAG"
+    },
+    {
+     "num": 334,
+     "difficulty": "Medium",
+     "title": "Dijkstra's Algorithm"
+    },
+    {
+     "num": 335,
+     "difficulty": "Medium",
+     "title": "Print Shortest Path (Dijkstra)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Mock - JS + React Round",
+     "bullets": [
+      "60-min mock (ask Claude or a peer to interview you)",
+      "Record, review, list gaps",
+      "Fix the top 3 gaps"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 137 DSA (yesterday)",
+    "Day 131 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 139,
+   "date_hint": "Sat, 27 Mar 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 336,
+     "difficulty": "Medium",
+     "title": "Shortest Path in Binary Maze"
+    },
+    {
+     "num": 337,
+     "difficulty": "Medium",
+     "title": "Path with Minimum Effort"
+    },
+    {
+     "num": 338,
+     "difficulty": "Medium",
+     "title": "Cheapest Flights Within K Stops"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Mock - Node + DB Round",
+     "bullets": [
+      "60-min mock on Node, Express, Mongo, SQL",
+      "Record, review, list gaps",
+      "Fix the top 3 gaps"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 138 DSA (yesterday)",
+    "Day 132 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 140,
+   "date_hint": "Sun, 28 Mar 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 134 - 139",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 141,
+   "date_hint": "Mon, 29 Mar 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 339,
+     "difficulty": "Medium",
+     "title": "Network Delay Time"
+    },
+    {
+     "num": 340,
+     "difficulty": "Medium",
+     "title": "Number of Ways to Arrive at Destination"
+    },
+    {
+     "num": 341,
+     "difficulty": "Medium",
+     "title": "Minimum Multiplications to Reach End"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Mock - Machine Coding (2h)",
+     "bullets": [
+      "Pick a random UI/feature prompt; build in 2 hours",
+      "Self-review against rubric",
+      "Refactor the weak parts"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 139 DSA (yesterday)",
+    "Day 134 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 142,
+   "date_hint": "Tue, 30 Mar 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 342,
+     "difficulty": "Medium",
+     "title": "Bellman-Ford"
+    },
+    {
+     "num": 343,
+     "difficulty": "Medium",
+     "title": "Floyd-Warshall"
+    },
+    {
+     "num": 344,
+     "difficulty": "Medium",
+     "title": "City with Smallest Number of Neighbours"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Mock - DSA Round",
+     "bullets": [
+      "2 problems in 45 min, think aloud",
+      "State complexity + edge cases",
+      "Review mistakes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 141 DSA (yesterday)",
+    "Day 135 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 143,
+   "date_hint": "Wed, 31 Mar 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 345,
+     "difficulty": "Medium",
+     "title": "Disjoint Set (Union-Find)"
+    },
+    {
+     "num": 346,
+     "difficulty": "Medium",
+     "title": "Prim's MST"
+    },
+    {
+     "num": 347,
+     "difficulty": "Medium",
+     "title": "Kruskal's MST"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Mock - System Design",
+     "bullets": [
+      "Design one system in 45 min (new prompt)",
+      "Diagram + trade-offs",
+      "Review gaps"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 142 DSA (yesterday)",
+    "Day 136 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 144,
+   "date_hint": "Thu, 01 Apr 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 348,
+     "difficulty": "Medium",
+     "title": "Operations to Make Network Connected"
+    },
+    {
+     "num": 349,
+     "difficulty": "Medium",
+     "title": "Accounts Merge"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Mock - LLD",
+     "bullets": [
+      "Design one low-level problem in 45 min (new prompt)",
+      "Class diagram + code skeleton",
+      "Review gaps"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 143 DSA (yesterday)",
+    "Day 137 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 145,
+   "date_hint": "Fri, 02 Apr 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 350,
+     "difficulty": "Hard",
+     "title": "Number of Islands II"
+    },
+    {
+     "num": 351,
+     "difficulty": "Hard",
+     "title": "Making a Large Island"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Mock - Behavioural / HR in English",
+     "bullets": [
+      "Answer 10 behavioural questions aloud",
+      "Record and review fluency + structure",
+      "Improve filler words, pace, clarity"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 144 DSA (yesterday)",
+    "Day 138 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 146,
+   "date_hint": "Sat, 03 Apr 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 352,
+     "difficulty": "Medium",
+     "title": "Most Stones Removed"
+    },
+    {
+     "num": 353,
+     "difficulty": "Hard",
+     "title": "Kosaraju's SCC"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Full Mock Loop #1",
+     "bullets": [
+      "Simulate 4 rounds in one day (DSA, frontend, backend, HR)",
+      "Rate each round using the rubric",
+      "Write down top-5 gaps"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 145 DSA (yesterday)",
+    "Day 139 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 147,
+   "date_hint": "Sun, 04 Apr 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 141 - 146",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 148,
+   "date_hint": "Mon, 05 Apr 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 15 Graphs",
+   "dsa": [
+    {
+     "num": 354,
+     "difficulty": "Hard",
+     "title": "Bridges in a Graph"
+    },
+    {
+     "num": 355,
+     "difficulty": "Hard",
+     "title": "Articulation Points"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Gap Analysis",
+     "bullets": [
+      "Cluster gaps by topic",
+      "Make a 10-day fix plan",
+      "Re-attempt failed mock questions"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 146 DSA (yesterday)",
+    "Day 141 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 149,
+   "date_hint": "Tue, 06 Apr 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 356,
+     "difficulty": "Easy",
+     "title": "Fibonacci (Memoization)"
+    },
+    {
+     "num": 357,
+     "difficulty": "Easy",
+     "title": "Climbing Stairs"
+    },
+    {
+     "num": 358,
+     "difficulty": "Medium",
+     "title": "Frog Jump"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Gap Fix I",
+     "bullets": [
+      "Study the #1 weak topic deeply",
+      "Do 10 practice questions on it",
+      "Teach it aloud (Feynman style)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 148 DSA (yesterday)",
+    "Day 142 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 150,
+   "date_hint": "Wed, 07 Apr 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 359,
+     "difficulty": "Medium",
+     "title": "Frog Jump with K Distance"
+    },
+    {
+     "num": 360,
+     "difficulty": "Medium",
+     "title": "Max Sum of Non-Adjacent Elements"
+    },
+    {
+     "num": 361,
+     "difficulty": "Medium",
+     "title": "House Robber II"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Gap Fix II",
+     "bullets": [
+      "Study the #2 weak topic deeply",
+      "Do 10 practice questions on it",
+      "Teach it aloud (Feynman style)"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 149 DSA (yesterday)",
+    "Day 143 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 5,
+   "phase_name": "Project 3, Behavioural and Mock Rounds"
+  },
+  {
+   "day": 151,
+   "date_hint": "Thu, 08 Apr 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 362,
+     "difficulty": "Medium",
+     "title": "Ninja's Training"
+    },
+    {
+     "num": 363,
+     "difficulty": "Medium",
+     "title": "Unique Paths"
+    },
+    {
+     "num": 364,
+     "difficulty": "Medium",
+     "title": "Unique Paths II"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Best Project - Scale-up I",
+     "bullets": [
+      "Add caching, pagination, indexes",
+      "Measure before/after with numbers",
+      "Update README with metrics"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 150 DSA (yesterday)",
+    "Day 144 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 152,
+   "date_hint": "Fri, 09 Apr 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 365,
+     "difficulty": "Medium",
+     "title": "Minimum Path Sum"
+    },
+    {
+     "num": 366,
+     "difficulty": "Medium",
+     "title": "Triangle (Min Path Sum)"
+    },
+    {
+     "num": 367,
+     "difficulty": "Medium",
+     "title": "Min/Max Falling Path Sum"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Best Project - Scale-up II",
+     "bullets": [
+      "Add tests + CI/CD gates",
+      "Add rate limiting + input validation",
+      "Fix any security gaps"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 151 DSA (yesterday)",
+    "Day 145 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 153,
+   "date_hint": "Sat, 10 Apr 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 368,
+     "difficulty": "Hard",
+     "title": "Cherry Pickup II"
+    },
+    {
+     "num": 369,
+     "difficulty": "Medium",
+     "title": "Subset Sum Equals K"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Best Project - Scale-up III",
+     "bullets": [
+      "Add logging, monitoring, error tracking",
+      "Write architecture + API docs",
+      "Polish UI details"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 152 DSA (yesterday)",
+    "Day 146 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 154,
+   "date_hint": "Sun, 11 Apr 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 148 - 153",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 155,
+   "date_hint": "Mon, 12 Apr 2027",
+   "tag": "PROJECT",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 370,
+     "difficulty": "Medium",
+     "title": "Partition Equal Subset Sum"
+    },
+    {
+     "num": 371,
+     "difficulty": "Medium",
+     "title": "Partition: Min Absolute Difference"
+    },
+    {
+     "num": 372,
+     "difficulty": "Medium",
+     "title": "Count Subsets with Sum K"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Best Project - Case Study",
+     "bullets": [
+      "Write a blog / case study: problem, design, trade-offs",
+      "Publish on LinkedIn / Dev.to",
+      "Add link to resume + portfolio"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 153 DSA (yesterday)",
+    "Day 148 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 156,
+   "date_hint": "Tue, 13 Apr 2027",
+   "tag": "CAREER",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 373,
+     "difficulty": "Medium",
+     "title": "Count Partitions with Given Difference"
+    },
+    {
+     "num": 374,
+     "difficulty": "Medium",
+     "title": "0/1 Knapsack"
+    },
+    {
+     "num": 375,
+     "difficulty": "Medium",
+     "title": "Minimum Coins (Coin Change)"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Open-Source / Community",
+     "bullets": [
+      "Find 3 good-first-issues; read a codebase",
+      "Make 1 PR (docs or bug fix)",
+      "Share a learning post on LinkedIn"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 155 DSA (yesterday)",
+    "Day 149 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 157,
+   "date_hint": "Wed, 14 Apr 2027",
+   "tag": "CAREER",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 376,
+     "difficulty": "Medium",
+     "title": "Target Sum"
+    },
+    {
+     "num": 377,
+     "difficulty": "Medium",
+     "title": "Coin Change II"
+    },
+    {
+     "num": 378,
+     "difficulty": "Medium",
+     "title": "Unbounded Knapsack"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Job Portals & Referral Setup",
+     "bullets": [
+      "Profiles: LinkedIn, Naukri, Wellfound, Instahyre",
+      "Cold-outreach + referral message templates",
+      "List 30 target companies"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 156 DSA (yesterday)",
+    "Day 150 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 158,
+   "date_hint": "Thu, 15 Apr 2027",
+   "tag": "CAREER",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 379,
+     "difficulty": "Medium",
+     "title": "Rod Cutting"
+    },
+    {
+     "num": 380,
+     "difficulty": "Medium",
+     "title": "Longest Common Subsequence"
+    },
+    {
+     "num": 381,
+     "difficulty": "Medium",
+     "title": "Print LCS"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Application Strategy",
+     "bullets": [
+      "Role-wise resume versions (Backend / Full-stack / Frontend)",
+      "Track applications in a sheet",
+      "Apply to first 5 roles"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 157 DSA (yesterday)",
+    "Day 151 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 159,
+   "date_hint": "Fri, 16 Apr 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 382,
+     "difficulty": "Medium",
+     "title": "Longest Common Substring"
+    },
+    {
+     "num": 383,
+     "difficulty": "Medium",
+     "title": "Longest Palindromic Subsequence"
+    },
+    {
+     "num": 384,
+     "difficulty": "Medium",
+     "title": "Min Insertions to Make Palindrome"
+    }
+   ],
+   "mern": [
+    {
+     "title": "JS Rapid-Fire",
+     "bullets": [
+      "100 JS questions in 90 minutes (self-quiz)",
+      "Redo any you missed",
+      "Update cheat sheet"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 158 DSA (yesterday)",
+    "Day 152 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 160,
+   "date_hint": "Sat, 17 Apr 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 385,
+     "difficulty": "Medium",
+     "title": "Min Insertions/Deletions to Convert String"
+    },
+    {
+     "num": 386,
+     "difficulty": "Medium",
+     "title": "Shortest Common Supersequence"
+    },
+    {
+     "num": 387,
+     "difficulty": "Medium",
+     "title": "Distinct Subsequences"
+    }
+   ],
+   "mern": [
+    {
+     "title": "React Rapid-Fire",
+     "bullets": [
+      "100 React questions in 90 minutes (self-quiz)",
+      "Redo any you missed",
+      "Update cheat sheet"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 159 DSA (yesterday)",
+    "Day 153 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 161,
+   "date_hint": "Sun, 18 Apr 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 155 - 160",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 162,
+   "date_hint": "Mon, 19 Apr 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 388,
+     "difficulty": "Medium",
+     "title": "Edit Distance"
+    },
+    {
+     "num": 389,
+     "difficulty": "Hard",
+     "title": "Wildcard Matching"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Node / Express / Mongo Rapid-Fire",
+     "bullets": [
+      "100 backend questions in 90 minutes (self-quiz)",
+      "Redo any you missed",
+      "Update cheat sheet"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 160 DSA (yesterday)",
+    "Day 155 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 163,
+   "date_hint": "Tue, 20 Apr 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 390,
+     "difficulty": "Medium",
+     "title": "Buy & Sell Stock II"
+    },
+    {
+     "num": 391,
+     "difficulty": "Hard",
+     "title": "Buy & Sell Stock III"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CS Core Rapid-Fire I (OS + DBMS)",
+     "bullets": [
+      "60 OS + DBMS questions (self-quiz)",
+      "Redo any you missed",
+      "Update cheat sheet"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 162 DSA (yesterday)",
+    "Day 156 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 164,
+   "date_hint": "Wed, 21 Apr 2027",
+   "tag": "INTERVIEW PREP",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 392,
+     "difficulty": "Hard",
+     "title": "Buy & Sell Stock IV"
+    },
+    {
+     "num": 393,
+     "difficulty": "Medium",
+     "title": "Stock with Cooldown"
+    }
+   ],
+   "mern": [
+    {
+     "title": "CS Core Rapid-Fire II (CN + OOP)",
+     "bullets": [
+      "60 CN + OOP questions (self-quiz)",
+      "Redo any you missed",
+      "Update cheat sheet"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 163 DSA (yesterday)",
+    "Day 157 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 165,
+   "date_hint": "Thu, 22 Apr 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 394,
+     "difficulty": "Medium",
+     "title": "Stock with Transaction Fee"
+    },
+    {
+     "num": 395,
+     "difficulty": "Medium",
+     "title": "Longest Increasing Subsequence"
+    },
+    {
+     "num": 396,
+     "difficulty": "Medium",
+     "title": "Print LIS"
+    }
+   ],
+   "mern": [
+    {
+     "title": "System Design Drill I",
+     "bullets": [
+      "New prompt: design in 45 min",
+      "Compare with a reference solution",
+      "Note missed trade-offs"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 164 DSA (yesterday)",
+    "Day 158 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 166,
+   "date_hint": "Fri, 23 Apr 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 397,
+     "difficulty": "Medium",
+     "title": "LIS (Binary Search, nlogn)"
+    },
+    {
+     "num": 398,
+     "difficulty": "Medium",
+     "title": "Largest Divisible Subset"
+    },
+    {
+     "num": 399,
+     "difficulty": "Medium",
+     "title": "Longest String Chain"
+    }
+   ],
+   "mern": [
+    {
+     "title": "System Design Drill II",
+     "bullets": [
+      "New prompt: design in 45 min",
+      "Compare with a reference solution",
+      "Note missed trade-offs"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 165 DSA (yesterday)",
+    "Day 159 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 167,
+   "date_hint": "Sat, 24 Apr 2027",
+   "tag": "SYSTEM DESIGN",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 400,
+     "difficulty": "Medium",
+     "title": "Longest Bitonic Subsequence"
+    },
+    {
+     "num": 401,
+     "difficulty": "Medium",
+     "title": "Number of LIS"
+    }
+   ],
+   "mern": [
+    {
+     "title": "LLD Drill",
+     "bullets": [
+      "New prompt: design + code skeleton in 45 min",
+      "Compare with a reference solution",
+      "Note missed patterns"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 166 DSA (yesterday)",
+    "Day 160 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 168,
+   "date_hint": "Sun, 25 Apr 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 162 - 167",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 169,
+   "date_hint": "Mon, 26 Apr 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 402,
+     "difficulty": "Hard",
+     "title": "Matrix Chain Multiplication"
+    },
+    {
+     "num": 403,
+     "difficulty": "Hard",
+     "title": "Minimum Cost to Cut a Stick"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Machine Coding Drill I (2h timed)",
+     "bullets": [
+      "Random UI prompt, 2 hours, no AI help",
+      "Review: structure, naming, edge cases",
+      "Fix and re-submit"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 167 DSA (yesterday)",
+    "Day 162 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 170,
+   "date_hint": "Tue, 27 Apr 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 404,
+     "difficulty": "Hard",
+     "title": "Burst Balloons"
+    },
+    {
+     "num": 405,
+     "difficulty": "Hard",
+     "title": "Evaluate Boolean Expression to True"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Machine Coding Drill II (2h timed)",
+     "bullets": [
+      "Random UI prompt, 2 hours, no AI help",
+      "Review: structure, naming, edge cases",
+      "Fix and re-submit"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 169 DSA (yesterday)",
+    "Day 163 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 171,
+   "date_hint": "Wed, 28 Apr 2027",
+   "tag": "CAREER",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 406,
+     "difficulty": "Hard",
+     "title": "Palindrome Partitioning II"
+    },
+    {
+     "num": 407,
+     "difficulty": "Medium",
+     "title": "Partition Array for Maximum Sum"
+    }
+   ],
+   "mern": [
+    {
+     "title": "English Speaking Day",
+     "bullets": [
+      "Record a 10-minute project walkthrough in English",
+      "Review: grammar, fillers, clarity",
+      "Re-record a better version"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 170 DSA (yesterday)",
+    "Day 164 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 172,
+   "date_hint": "Thu, 29 Apr 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 16 Dynamic Programming",
+   "dsa": [
+    {
+     "num": 408,
+     "difficulty": "Hard",
+     "title": "Maximum Rectangle of 1s in Binary Matrix"
+    },
+    {
+     "num": 409,
+     "difficulty": "Medium",
+     "title": "Count Square Submatrices with All 1s"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Full Mock Loop #2",
+     "bullets": [
+      "4 rounds in one day with a peer/mentor",
+      "Score with the rubric",
+      "List fixes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 171 DSA (yesterday)",
+    "Day 165 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 173,
+   "date_hint": "Fri, 30 Apr 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "Step 17 Tries",
+   "dsa": [
+    {
+     "num": 410,
+     "difficulty": "Medium",
+     "title": "Implement Trie (Prefix Tree)"
+    },
+    {
+     "num": 411,
+     "difficulty": "Medium",
+     "title": "Implement Trie II (Count/Erase)"
+    },
+    {
+     "num": 412,
+     "difficulty": "Medium",
+     "title": "Longest Word with All Prefixes"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Full Mock Loop #3",
+     "bullets": [
+      "4 rounds in one day with a peer/mentor",
+      "Score with the rubric",
+      "List fixes"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 172 DSA (yesterday)",
+    "Day 166 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 174,
+   "date_hint": "Sat, 01 May 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 17 Tries",
+   "dsa": [
+    {
+     "num": 413,
+     "difficulty": "Medium",
+     "title": "Number of Distinct Substrings"
+    },
+    {
+     "num": 414,
+     "difficulty": "Medium",
+     "title": "Maximum XOR of Two Numbers"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Gap Fix Day",
+     "bullets": [
+      "Attack the lowest-scoring rubric area",
+      "10 targeted practice questions",
+      "Re-test yourself"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 173 DSA (yesterday)",
+    "Day 167 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 175,
+   "date_hint": "Sun, 02 May 2027",
+   "tag": "WEEKLY REVISION",
+   "is_sunday": true,
+   "dsa_header": "Days 169 - 174",
+   "dsa": [],
+   "mern": [],
+   "revision": [
+    "Redo the 6 toughest DSA problems of this week (no hints)",
+    "Re-dry-run every pattern learned this week; update your pattern notes",
+    "Re-attempt any problem you could not solve alone (watch the solution only after 30 min)",
+    "45-min timed mock (1 DSA + 10 Qs)",
+    "Score 1-5 (rubric, page 3)",
+    "Note 3 weak topics",
+    "Rebuild one small thing from this week from scratch (no copy-paste)",
+    "Fix pending bugs / unfinished tasks and push to GitHub",
+    "Write 5 interview questions from this week and answer them aloud",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 176,
+   "date_hint": "Mon, 03 May 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 17 Tries + Step 18 Advanced Strings",
+   "dsa": [
+    {
+     "num": 415,
+     "difficulty": "Hard",
+     "title": "Maximum XOR with an Element from Array"
+    },
+    {
+     "num": 416,
+     "difficulty": "Hard",
+     "title": "Z-Function"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Final Revision I - DSA Patterns",
+     "bullets": [
+      "Write a one-page DSA patterns cheat sheet",
+      "Re-solve 6 representative problems",
+      "Review complexity tables"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 174 DSA (yesterday)",
+    "Day 169 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 177,
+   "date_hint": "Tue, 04 May 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 18 Advanced Strings",
+   "dsa": [
+    {
+     "num": 417,
+     "difficulty": "Hard",
+     "title": "KMP / LPS Array"
+    },
+    {
+     "num": 418,
+     "difficulty": "Hard",
+     "title": "Rabin-Karp Algorithm"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Final Revision II - Frontend",
+     "bullets": [
+      "HTML/CSS/JS/React cheat sheets",
+      "Rebuild one component from memory",
+      "Quick quiz"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 176 DSA (yesterday)",
+    "Day 170 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 178,
+   "date_hint": "Wed, 05 May 2027",
+   "tag": "REVISION",
+   "is_sunday": false,
+   "dsa_header": "Step 18 Advanced Strings",
+   "dsa": [
+    {
+     "num": 419,
+     "difficulty": "Hard",
+     "title": "Shortest Palindrome"
+    }
+   ],
+   "mern": [
+    {
+     "title": "Final Revision III - Backend & DB",
+     "bullets": [
+      "Node/Express/Mongo/SQL cheat sheets",
+      "Rebuild one API from memory",
+      "Quick quiz"
+     ]
+    }
+   ],
+   "revision": [
+    "Day 177 DSA (yesterday)",
+    "Day 171 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 179,
+   "date_hint": "Thu, 06 May 2027",
+   "tag": "MOCK",
+   "is_sunday": false,
+   "dsa_header": "MIXED REVISION DAY - Arrays + Binary Search",
+   "dsa": [],
+   "mern": [
+    {
+     "title": "Full Mock Loop #4 (Final)",
+     "bullets": [
+      "Full simulated interview day",
+      "Score + celebrate improvement vs Loop #1",
+      "Fix last gaps"
+     ]
+    }
+   ],
+   "revision": [
+    "Re-solve 3 starred problems from: Arrays + Binary Search",
+    "Solve 1 unseen problem on this topic (LeetCode / sheet) in 30 min",
+    "Update the one-page cheat sheet for this topic",
+    "Day 178 DSA (yesterday)",
+    "Day 172 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  },
+  {
+   "day": 180,
+   "date_hint": "Fri, 07 May 2027",
+   "tag": "CAREER",
+   "is_sunday": false,
+   "dsa_header": "MIXED REVISION DAY - Linked List + Stack & Queue",
+   "dsa": [],
+   "mern": [
+    {
+     "title": "Day 180 - Final Review & Launch",
+     "bullets": [
+      "Review all 6 monthly checkpoints",
+      "Update resume, portfolio, LinkedIn",
+      "Plan the Mock-Interview Phase (last pages of this planner)"
+     ]
+    }
+   ],
+   "revision": [
+    "Re-solve 3 starred problems from: Linked List + Stack & Queue",
+    "Solve 1 unseen problem on this topic (LeetCode / sheet) in 30 min",
+    "Update the one-page cheat sheet for this topic",
+    "Day 179 DSA (yesterday)",
+    "Day 173 DSA (7-day recall)",
+    "MERN notes + flashcards",
+    "English chat with Claude (new chat, 30 min)",
+    "Commute: flashcards / audio revision"
+   ],
+   "phase": 6,
+   "phase_name": "Polish, Apply and Final Mock Loops"
+  }
+ ]
+}

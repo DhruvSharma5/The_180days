@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/jetbrains-mono";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-family-heading);
+    --font-sans: var(--font-family-sans);
+    --font-mono: var(--font-family-mono);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --font-family-sans: 'Plus Jakarta Sans Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-family-heading: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+    --font-family-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+
+    --background: #F8FAFC;
+    --foreground: #0F172A;
+    --card: #FFFFFF;
+    --card-foreground: #0F172A;
+    --popover: #FFFFFF;
+    --popover-foreground: #0F172A;
+    --primary: #0D9488;
+    --primary-foreground: #FFFFFF;
+    --secondary: #E6EEF5;
+    --secondary-foreground: #0F172A;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --accent: #D9F2EF;
+    --accent-foreground: #0B4F47;
+    --destructive: #DC2626;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #14B8A6;
+    --chart-1: #0D9488;
+    --chart-2: #06B6D4;
+    --chart-3: #0284C7;
+    --chart-4: #F59E0B;
+    --chart-5: #DC2626;
+    --radius: 0.75rem;
+    --sidebar: #FFFFFF;
+    --sidebar-foreground: #0F172A;
+    --sidebar-primary: #0D9488;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #F1F5F9;
+    --sidebar-accent-foreground: #0F172A;
+    --sidebar-border: #E2E8F0;
+    --sidebar-ring: #14B8A6;
+}
+
+.dark {
+    --background: #070E1A;
+    --foreground: #F8FAFC;
+    --card: #0D1B2E;
+    --card-foreground: #F8FAFC;
+    --popover: #0D1B2E;
+    --popover-foreground: #F8FAFC;
+    --primary: #14B8A6;
+    --primary-foreground: #04211C;
+    --secondary: #15263F;
+    --secondary-foreground: #F1F5F9;
+    --muted: #11223A;
+    --muted-foreground: #94A3B8;
+    --accent: #15263F;
+    --accent-foreground: #F1F5F9;
+    --destructive: #F87171;
+    --border: #1E293B;
+    --input: #1E293B;
+    --ring: #14B8A6;
+    --chart-1: #14B8A6;
+    --chart-2: #06B6D4;
+    --chart-3: #38BDF8;
+    --chart-4: #FBBF24;
+    --chart-5: #F87171;
+    --radius: 0.75rem;
+    --sidebar: #081220;
+    --sidebar-foreground: #F8FAFC;
+    --sidebar-primary: #14B8A6;
+    --sidebar-primary-foreground: #04211C;
+    --sidebar-accent: #15263F;
+    --sidebar-accent-foreground: #F1F5F9;
+    --sidebar-border: #1E293B;
+    --sidebar-ring: #14B8A6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+  h1, h2, h3 {
+    @apply font-heading tracking-tight;
+    }
+}
+
+/* Keep the page from rubber-banding under the fixed mobile bottom nav. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Slim scrollbar for day strips and calendars */
+.thin-scroll::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--muted-foreground) 35%, transparent);
+}

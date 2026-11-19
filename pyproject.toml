@@ -1,0 +1,10 @@
+[project]
+name = "180days"
+version = "1.0.0"
+requires-python = ">=3.13,<3.14"
+
+[tool.vercel]
+entrypoint = "backend.server:app"
+
+[tool.vercel.scripts]
+build = "corepack yarn@1.22.22 --cwd frontend install --frozen-lockfile && corepack yarn@1.22.22 --cwd frontend build"
