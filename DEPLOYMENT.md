@@ -53,7 +53,9 @@ existing MongoDB Atlas M0 cluster.
 1. Import the GitHub repository into a Vercel Hobby project.
 2. Set the project **Root Directory** to the repository root (`.`). Keep the
    framework and build settings on automatic detection so `pyproject.toml`
-   supplies the FastAPI entrypoint/build command.
+   supplies the FastAPI entrypoint, runtime dependencies, and build command.
+   `requirements.txt` also references `backend/requirements-runtime.txt` for
+   local pip installs.
 3. Keep the project on Hobby. Do not enable billing upgrades or paid add-ons.
 4. Add these environment variables for **Production** (and Preview only if you
    intentionally want previews to use a separate test database):
@@ -77,13 +79,30 @@ existing MongoDB Atlas M0 cluster.
    those collections.
 
 5. Deploy to Production. The root build installs the existing Yarn 1 lockfile
-   and builds the React app; FastAPI is deployed as a Vercel Python Function.
+   and builds the React app; the root `pyproject.toml` dependencies are installed
+   for the FastAPI Vercel Python Function.
    The frontend remains at `/`, and API paths remain at `/api/*`.
 6. Confirm the production URL matches `APP_URL` and `CORS_ORIGINS`. If the
    Vercel domain changes, update both values and redeploy.
 7. In Vercel's **Schedules** page, confirm `daily-reminders` exists. Use the
    dashboard's manual run only after email configuration is complete; it sends
    real reminder emails to opted-in users.
+
+## Health checks and runtime diagnostics
+
+- `GET /api/health/live` returns `200` when the FastAPI function is loaded and
+  does not contact MongoDB.
+- `GET /api/health/ready` performs a read-only MongoDB ping. It returns `200`
+  when Atlas is reachable and `503` when the database is unavailable.
+- API responses include an `X-Request-ID`. Unhandled errors are logged with
+  that ID, the route template, HTTP method, exception class, and a safe error
+  category. Stack frames include only source file names, function names, and
+  line numbers. Log entries omit request bodies, credentials, cookies, and raw
+  exception messages.
+- Vercel Runtime Logs are available on all plans from the project's **Logs**
+  page. Filter for failed requests and correlate by request ID. Build output is
+  available from the Production deployment tile; neither requires Pro Request
+  Logs.
 
 To bootstrap an administrator, use `backend/provision_admin.py --confirm` from
 a trusted machine with the target `MONGO_URL`, `DB_NAME`, `JWT_SECRET`,

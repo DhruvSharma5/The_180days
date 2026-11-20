@@ -29,6 +29,7 @@ from lib.emailer import (
     send_email,
     verification_code_email,
 )
+from lib.observability import log_event
 from models.models import (
     AuthOut,
     ChangePasswordIn,
@@ -170,7 +171,12 @@ async def signup(body: SignupIn, request: Request, response: Response):
             await send_email(to=email, subject=subject, html=html)
         ) is not None
     except HTTPException as exc:
-        logger.warning("Verification email unavailable: %s", exc.detail)
+        log_event(
+            logger,
+            logging.WARNING,
+            "email.verification_unavailable",
+            status_code=exc.status_code,
+        )
     fresh, max_age = create_session_token(user_doc["id"])
     set_session_cookie(response, fresh, max_age, request)
     return AuthOut(
@@ -221,7 +227,12 @@ async def forgot_password(body: ForgotIn, request: Request):
             subject, html = password_reset_email(user["name"], token)
             await send_email(to=email, subject=subject, html=html)
         except HTTPException as exc:
-            logger.warning("Reset email unavailable: %s", exc.detail)
+            log_event(
+                logger,
+                logging.WARNING,
+                "email.password_reset_unavailable",
+                status_code=exc.status_code,
+            )
     return MessageOut(
         message="If an account exists for that email, a reset link is on its way."
     )
@@ -288,7 +299,12 @@ async def resend_verification(request: Request, user: User = Depends(get_current
         subject, html = verification_code_email(user.name, code)
         sent = await send_email(to=user.email, subject=subject, html=html)
     except HTTPException as exc:
-        logger.warning("Verification email unavailable: %s", exc.detail)
+        log_event(
+            logger,
+            logging.WARNING,
+            "email.verification_unavailable",
+            status_code=exc.status_code,
+        )
         raise
     if sent is None:
         raise HTTPException(

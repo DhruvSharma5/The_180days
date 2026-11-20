@@ -1,22 +1,41 @@
 import asyncio
-from contextlib import asynccontextmanager, suppress
-from fastapi import FastAPI, APIRouter
-from dotenv import load_dotenv
-from starlette.middleware.cors import CORSMiddleware
-import os
 import logging
-from pathlib import Path
-from pydantic import BaseModel, Field
-from typing import List
-import uuid
-from datetime import datetime
+import os
 import sys
+import uuid
+from contextlib import asynccontextmanager, suppress
+from datetime import datetime
+from pathlib import Path
+from typing import List
 
+from dotenv import load_dotenv
+from fastapi import APIRouter, FastAPI, Request
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, Field
+from pymongo.errors import PyMongoError, ServerSelectionTimeoutError
+from starlette.middleware.cors import CORSMiddleware
+
+
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+logger = logging.getLogger("180days")
 
 ROOT_DIR = Path(__file__).parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
-load_dotenv(ROOT_DIR / '.env')
+load_dotenv(ROOT_DIR / ".env")
+
+from lib.observability import log_event, safe_stack_frames
+
+_REQUIRED_ENV = ("MONGO_URL", "DB_NAME", "JWT_SECRET")
+_missing_env = [name for name in _REQUIRED_ENV if not os.environ.get(name, "").strip()]
+if _missing_env:
+    log_event(
+        logger,
+        logging.ERROR,
+        "startup.missing_configuration",
+        missing_variables=_missing_env,
+    )
+    raise RuntimeError("Missing required application configuration")
 
 # MongoDB connection
 from lib.db import client, db, ensure_indexes
@@ -35,6 +54,66 @@ async def lifespan(app: FastAPI):
 
 # Create the main app without a prefix
 app = FastAPI(lifespan=lifespan)
+
+
+@app.middleware("http")
+async def add_request_id(request: Request, call_next):
+    request_id = uuid.uuid4().hex
+    request.state.request_id = request_id
+    response = await call_next(request)
+    response.headers["X-Request-ID"] = request_id
+    return response
+
+
+@app.exception_handler(PyMongoError)
+async def handle_database_error(request: Request, exc: PyMongoError):
+    request_id = getattr(request.state, "request_id", uuid.uuid4().hex)
+    route = getattr(request.scope.get("route"), "path", "unmatched")
+    error_code = (
+        "database_unavailable"
+        if isinstance(exc, ServerSelectionTimeoutError)
+        else "database_operation_failed"
+    )
+    log_event(
+        logger,
+        logging.ERROR,
+        "request.database_error",
+        error_code=error_code,
+        exception_type=type(exc).__name__,
+        method=request.method,
+        request_id=request_id,
+        route=route,
+        stack=safe_stack_frames(exc),
+        status_code=503,
+    )
+    return JSONResponse(
+        status_code=503,
+        content={"detail": "Database temporarily unavailable", "request_id": request_id},
+        headers={"X-Request-ID": request_id},
+    )
+
+
+@app.exception_handler(Exception)
+async def handle_unexpected_error(request: Request, exc: Exception):
+    request_id = getattr(request.state, "request_id", uuid.uuid4().hex)
+    route = getattr(request.scope.get("route"), "path", "unmatched")
+    log_event(
+        logger,
+        logging.ERROR,
+        "request.unhandled_exception",
+        exception_type=type(exc).__name__,
+        method=request.method,
+        request_id=request_id,
+        route=route,
+        stack=safe_stack_frames(exc),
+        status_code=500,
+    )
+    return JSONResponse(
+        status_code=500,
+        content={"detail": "Internal Server Error", "request_id": request_id},
+        headers={"X-Request-ID": request_id},
+    )
+
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
@@ -74,6 +153,18 @@ class StatusCheckCreate(BaseModel):
 async def root():
     return {"message": "Hello World"}
 
+
+@api_router.get("/health/live")
+async def health_live():
+    return {"status": "ok"}
+
+
+@api_router.get("/health/ready")
+async def health_ready():
+    await client.admin.command("ping")
+    return {"status": "ready"}
+
+
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
     status_dict = input.model_dump()
@@ -106,10 +197,3 @@ app.add_middleware(
 frontend_dist = ROOT_DIR.parent / "frontend" / "dist"
 if frontend_dist.is_dir():
     app.frontend("/", directory=frontend_dist, fallback="index.html")
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)

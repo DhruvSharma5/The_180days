@@ -6,19 +6,34 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from pymongo import ASCENDING, DESCENDING, AsyncMongoClient, IndexModel
+from pymongo.errors import ConfigurationError, InvalidURI
+
+from lib.observability import log_event, safe_stack_frames
 
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 mongo_url = os.environ["MONGO_URL"]
-client = AsyncMongoClient(
-    mongo_url,
-    serverSelectionTimeoutMS=5000,
-    connectTimeoutMS=10000,
-    maxPoolSize=10,
-)
-db = client[os.environ["DB_NAME"]]
-
 logger = logging.getLogger(__name__)
+
+try:
+    client = AsyncMongoClient(
+        mongo_url,
+        serverSelectionTimeoutMS=5000,
+        connectTimeoutMS=10000,
+        maxPoolSize=10,
+    )
+except (ConfigurationError, InvalidURI) as exc:
+    log_event(
+        logger,
+        logging.ERROR,
+        "mongodb.client_initialization_failed",
+        exception_type=type(exc).__name__,
+        error_code="invalid_connection_configuration",
+        stack=safe_stack_frames(exc),
+    )
+    raise
+
+db = client[os.environ["DB_NAME"]]
 
 # One entry per collection: every field a route filters, sorts, or dedupes on. Applied by ensure_indexes() at startup.
 INDEXES: dict[str, list[IndexModel]] = {
@@ -77,4 +92,11 @@ async def ensure_indexes() -> None:
             try:
                 await db[collection].create_indexes([model])
             except Exception as exc:  # never block boot on an index; the log line names what to fix
-                logger.error("ensure_indexes(%s.%s): %s", collection, model.document["name"], exc)
+                log_event(
+                    logger,
+                    logging.ERROR,
+                    "mongodb.index_creation_failed",
+                    collection=collection,
+                    exception_type=type(exc).__name__,
+                    index=model.document["name"],
+                )

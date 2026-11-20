@@ -12,6 +12,7 @@ from fastapi import HTTPException
 from lib.db import db
 from lib.emailer import daily_reminder_email, send_email
 from lib.journey import today_in_tz
+from lib.observability import log_event
 
 logger = logging.getLogger(__name__)
 
@@ -56,7 +57,12 @@ async def dispatch_daily_reminders() -> tuple[int, int]:
             else:
                 skipped += 1
         except HTTPException as exc:
-            logger.warning("Reminder skipped for %s: %s", u.get("email"), exc.detail)
+            log_event(
+                logger,
+                logging.WARNING,
+                "email.daily_reminder_unavailable",
+                status_code=exc.status_code,
+            )
             skipped += 1
         await asyncio.sleep(0.05)
     return sent, skipped
