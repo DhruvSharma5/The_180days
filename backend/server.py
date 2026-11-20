@@ -24,7 +24,12 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 load_dotenv(ROOT_DIR / ".env")
 
-from lib.observability import log_event, safe_stack_frames
+from lib.observability import (
+    log_event,
+    mongo_server_diagnostics,
+    mongo_uri_host_fingerprint,
+    safe_stack_frames,
+)
 
 _REQUIRED_ENV = ("MONGO_URL", "DB_NAME", "JWT_SECRET")
 _missing_env = [name for name in _REQUIRED_ENV if not os.environ.get(name, "").strip()]
@@ -69,6 +74,9 @@ async def add_request_id(request: Request, call_next):
 async def handle_database_error(request: Request, exc: PyMongoError):
     request_id = getattr(request.state, "request_id", uuid.uuid4().hex)
     route = getattr(request.scope.get("route"), "path", "unmatched")
+    host_fingerprint, host_count = mongo_uri_host_fingerprint(
+        os.environ.get("MONGO_URL", "")
+    )
     error_code = (
         "database_unavailable"
         if isinstance(exc, ServerSelectionTimeoutError)
@@ -83,6 +91,10 @@ async def handle_database_error(request: Request, exc: PyMongoError):
         method=request.method,
         request_id=request_id,
         route=route,
+        mongo_host_count=host_count,
+        mongo_host_fingerprint=host_fingerprint,
+        database_name_present=bool(os.environ.get("DB_NAME", "").strip()),
+        server_diagnostics=mongo_server_diagnostics(client),
         stack=safe_stack_frames(exc),
         status_code=503,
     )

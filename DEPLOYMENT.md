@@ -99,6 +99,10 @@ existing MongoDB Atlas M0 cluster.
   category. Stack frames include only source file names, function names, and
   line numbers. Log entries omit request bodies, credentials, cookies, and raw
   exception messages.
+- Temporary MongoDB diagnostics also record per-server exception classes and
+  coarse categories, a short fingerprint of the configured MongoDB host list,
+  and whether `DB_NAME` is present. They do not record hostnames, raw error
+  messages, or connection-string values.
 - Vercel Runtime Logs are available on all plans from the project's **Logs**
   page. Filter for failed requests and correlate by request ID. Build output is
   available from the Production deployment tile; neither requires Pro Request
