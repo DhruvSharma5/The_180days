@@ -40,7 +40,8 @@ def test_log_event_keeps_safe_fields_and_omits_sensitive_values(caplog):
 def test_mongo_diagnostics_classify_server_errors_without_logging_raw_details(caplog):
     class Server:
         error = AutoReconnect(
-            "TLS certificate verify failed for mongodb://user:secret@private-host"
+            "TLS certificate verify failed: unable to get local issuer certificate "
+            "for mongodb://user:secret@private-host"
         )
 
     class Description:
@@ -68,7 +69,7 @@ def test_mongo_diagnostics_classify_server_errors_without_logging_raw_details(ca
         {
             "server_index": 1,
             "exception_type": "AutoReconnect",
-            "category": "tls",
+            "category": "tls_certificate_verification",
         }
     ]
     assert "private-host" not in caplog.records[0].message
@@ -93,6 +94,7 @@ def test_mongo_server_diagnostics_distinguish_connection_failure_categories():
         "connection timed out",
         "Authentication failed",
         "IP address is not allowed",
+        "TLS handshake failed",
     )
 
     class Server:
@@ -120,6 +122,7 @@ def test_mongo_server_diagnostics_distinguish_connection_failure_categories():
         "socket_timeout",
         "authentication",
         "atlas_network_access_restriction",
+        "tls_handshake",
     ]
     assert all("private-host" not in str(item) for item in diagnostics)
     assert all(message not in str(diagnostics) for message in messages)

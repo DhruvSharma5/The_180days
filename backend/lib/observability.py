@@ -97,8 +97,24 @@ def mongo_server_diagnostics(client: object) -> list[dict[str, str | int]]:
             category = "atlas_network_access_restriction"
         elif any(term in message for term in ("authentication failed", "sasl", "authfailed")):
             category = "authentication"
-        elif any(term in message for term in ("certificate", "ssl", "tls")):
-            category = "tls"
+        elif any(
+            term in message
+            for term in (
+                "certificate verify failed",
+                "certificate_verify_failed",
+                "unable to get local issuer",
+                "self-signed certificate",
+                "certificate has expired",
+                "certificate is not yet valid",
+            )
+        ):
+            category = "tls_certificate_verification"
+        elif any(term in message for term in ("ssl", "tls", "certificate")):
+            category = (
+                "tls_handshake"
+                if any(term in message for term in ("handshake", "tlsv1 alert"))
+                else "tls_other"
+            )
         elif any(
             term in message
             for term in (
