@@ -6,12 +6,14 @@ this app's own APP_URL over https, and every send passes _assert_safe_email firs
 """
 
 import asyncio
+import errno
 import hashlib
 import ipaddress
 import logging
 import os
 import re
 import smtplib
+import socket
 import ssl
 from email.message import EmailMessage
 from email.utils import formataddr, make_msgid
@@ -22,6 +24,7 @@ from urllib.parse import urlparse
 
 from dotenv import load_dotenv
 from fastapi import HTTPException
+
 from lib.observability import log_event
 
 load_dotenv(Path(__file__).parent.parent / ".env")
@@ -256,6 +259,27 @@ def _send_smtp(
     return message["Message-ID"]
 
 
+def _smtp_os_error_diagnostics(exc: OSError) -> dict[str, str | int]:
+    if isinstance(exc, socket.gaierror):
+        category = "dns_resolution"
+    elif isinstance(exc, ssl.SSLError):
+        category = "tls_transport"
+    elif isinstance(exc, TimeoutError) or exc.errno == errno.ETIMEDOUT:
+        category = "socket_timeout"
+    elif exc.errno == errno.ECONNREFUSED:
+        category = "connection_refused"
+    elif exc.errno in {errno.EHOSTUNREACH, errno.ENETUNREACH}:
+        category = "network_unreachable"
+    elif exc.errno == errno.ECONNRESET:
+        category = "connection_reset"
+    else:
+        category = "os_error"
+    diagnostics: dict[str, str | int] = {"failure_category": category}
+    if exc.errno is not None:
+        diagnostics["os_error_errno"] = exc.errno
+    return diagnostics
+
+
 async def send_email(
     *,
     to: str,
@@ -314,6 +338,11 @@ async def send_email(
             status_code=503, detail="Email delivery is temporarily unavailable."
         ) from None
     except (smtplib.SMTPException, OSError, TimeoutError, ssl.SSLError) as exc:
+        diagnostics = (
+            _smtp_os_error_diagnostics(exc)
+            if isinstance(exc, OSError)
+            else {"failure_category": "smtp_protocol"}
+        )
         log_event(
             logger,
             logging.ERROR,
@@ -321,6 +350,7 @@ async def send_email(
             error_code="smtp_delivery_failed",
             exception_type=type(exc).__name__,
             status_code=503,
+            **diagnostics,
         )
         raise HTTPException(
             status_code=503, detail="Email delivery is temporarily unavailable."

@@ -1,3 +1,4 @@
+import errno
 import logging
 import smtplib
 import ssl
@@ -149,7 +150,7 @@ async def test_smtp_connection_error_is_sanitized(monkeypatch, caplog):
 
     class ConnectionFailure:
         def __init__(self, *_args, **_kwargs):
-            raise OSError("private-host.example.test timeout detail")
+            raise OSError(errno.ENETUNREACH, "private-host.example.test timeout detail")
 
     monkeypatch.setattr(emailer.smtplib, "SMTP", ConnectionFailure)
     with caplog.at_level(logging.ERROR, logger="lib.emailer"):
@@ -161,6 +162,8 @@ async def test_smtp_connection_error_is_sanitized(monkeypatch, caplog):
             )
 
     assert exc_info.value.status_code == 503
+    assert '"failure_category":"network_unreachable"' in caplog.text
+    assert f'"os_error_errno":{errno.ENETUNREACH}' in caplog.text
     assert "private-host.example.test" not in caplog.text
     assert "timeout detail" not in caplog.text
 
