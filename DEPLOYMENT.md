@@ -8,30 +8,27 @@ existing MongoDB Atlas M0 cluster.
 
 ## Free-tier scope and limits
 
-- Use Vercel's free Hobby plan, MongoDB Atlas M0, and Resend Free only. Do not
-  enable a paid plan, paid add-on, or usage-based billing. Hobby usage may pause
-  when an allowance is exhausted instead of charging overages.
+- Use Vercel's free Hobby plan, MongoDB Atlas M0, and Gmail SMTP for low-volume
+  personal testing. Do not enable a paid plan, paid add-on, or usage-based
+  billing. Hobby usage may pause when an allowance is exhausted instead of
+  charging overages.
 - Vercel Hobby schedules have a 15-minute timing window. The daily reminder
   schedule is configured for 18:30 Asia/Kolkata, but it is not guaranteed to run
   at exactly 18:30.
 - The reminder handler has a 60-second function limit and Vercel path schedules
-  do not retry failed runs. Resend idempotency keys protect a user's reminder
-  from duplicate sends for the same local date when a run is repeated.
-- Resend Free includes up to 3,000 emails/month and 100/day. Provider limits,
-  recipient delivery policies, and Vercel function limits still apply.
-- Resend requires a verified domain you own. Domain verification is available on
-  its free plan, but buying a domain is not free. Without an owned, verified
-  domain, production OTP, password-reset, and reminder delivery cannot be
-  enabled. Do not use a test sender for general user delivery.
+  do not retry failed runs. SMTP does not provide Resend-style provider
+  idempotency; repeated reminder runs can deliver duplicates.
+- Gmail may limit, delay, or reject automated and high-volume messages. Its
+  consumer SMTP service is suitable only for low-volume personal testing, not a
+  guaranteed transactional-email service.
 - Vercel Hobby is intended for personal, non-commercial use. Check the current
   Vercel plan terms for your use case; this guide does not enable or recommend a
   paid upgrade.
 
 ## Before deploying
 
-1. Put the project in a GitHub repository. The current workspace has no Git
-   repository or remote configured, so it cannot be pushed from this workspace
-   yet.
+1. Push the reviewed changes to the GitHub repository connected to Vercel before
+   importing or redeploying the project.
 2. In Atlas, create a database user limited to read/write access for the
    `180days` database. Use the cluster's TLS connection string as the private
    `MONGO_URL` value. URL-encode special characters in the database user's
@@ -42,8 +39,10 @@ existing MongoDB Atlas M0 cluster.
    network endpoint publicly, so use a unique strong database password, the
    least-privileged database role, and TLS. Never use an Atlas administrator
    account for the app.
-4. In Resend, add and verify a domain you own, then create an API key restricted
-   to sending if the dashboard offers that permission for your account.
+4. Enable 2-Step Verification on the Gmail account and create a Gmail App
+   Password for SMTP. Use `180dayys@gmail.com` as both the SMTP username and
+   sender. Store the App Password only in Vercel's sensitive environment
+   variable field; never add it to this repository or frontend.
 5. Generate unique random values for `JWT_SECRET` and `CRON_SECRET`. Store them
    only in the Vercel environment-variable dashboard; do not put real values in
    this repository or share them in chat.
@@ -69,9 +68,21 @@ existing MongoDB Atlas M0 cluster.
    | `CORS_ORIGINS` | The same app origin, e.g. `https://your-app.vercel.app` |
    | `APP_TZ` | `Asia/Kolkata` |
    | `CRON_SECRET` | Unique, long random secret |
-   | `RESEND_API_KEY` | Resend API key; treat as a secret |
-   | `FROM_EMAIL` | Sender address at the verified Resend domain |
-   | `EMAIL_FROM_NAME` | `180Days` (optional) |
+   | `SMTP_HOST` | `smtp.gmail.com` |
+   | `SMTP_PORT` | `587` |
+   | `SMTP_USERNAME` | `180dayys@gmail.com` |
+   | `SMTP_PASSWORD` | Gmail App Password; mark as sensitive/secret |
+   | `SMTP_FROM_EMAIL` | `180dayys@gmail.com` |
+   | `SMTP_FROM_NAME` | `180Days` |
+   | `SMTP_USE_TLS` | `true` |
+
+   Add each value in **Project Settings → Environment Variables**, selecting
+   **Production** as the environment. Mark `SMTP_PASSWORD` sensitive if the
+   dashboard presents that option. Add values without quotes or trailing
+   spaces. Keep existing MongoDB, JWT, timezone, and other settings unchanged.
+   The password is server-side only. After saving the variables, manually
+   redeploy Production so the function receives them; this guide does not
+   deploy automatically.
 
    The deployment does not run database seed scripts automatically. Do not run
    `backend/seed.py` against a populated database: it replaces roadmap data and
@@ -128,17 +139,26 @@ not run them against Production.
 
 ## Email behavior
 
-Email delivery is skipped unless the app has a public HTTPS `APP_URL`, a
-`RESEND_API_KEY`, and a `FROM_EMAIL`. OTPs remain six digits, expire after 10
-minutes, are single-use, and can be resent under the existing rate limit.
-Password-reset links and opted-in daily reminders use the same Resend API.
+Email sends require a public HTTPS `APP_URL`, Gmail SMTP on port `587`, and
+STARTTLS. SMTP username, App Password, sender address, and sender name are
+server-side environment variables. Signup reports whether the verification
+email was sent; authenticated resend returns a safe error if delivery fails.
+Verification codes are six digits, stored only as hashes, expire after 10
+minutes, are single-use, and retain the existing resend rate limit. A new code
+is stored and older unused codes are invalidated only after delivery succeeds.
+Password-reset links and opted-in daily reminders use the same SMTP transport.
 
-If you do not own a domain, the free Resend plan cannot provide production
-delivery to arbitrary users. A personal Gmail SMTP app password is a possible
-zero-cost experiment for a very small personal deployment, but it has provider
-quotas and deliverability/policy constraints and is not a reliable transactional
-email replacement. Keep email disabled rather than claiming verification works
-until real delivery is tested.
+To configure Vercel Production, open **Project Settings → Environment
+Variables**, add the SMTP variables listed above for **Production**, mark
+`SMTP_PASSWORD` sensitive, save, and manually redeploy. Do not paste the App
+Password into source code, GitHub, frontend settings, chat, logs, or this
+documentation.
+
+For local development, copy `backend/.env.example` to `backend/.env` and add
+credentials only to that ignored local file if you intentionally want to send a
+real message. The mailer requires an HTTPS `APP_URL`; automated tests use
+mocked SMTP and do not send real email. No endpoint returns an OTP, including
+in development. Use a separate development database.
 
 ## Local configuration template
 

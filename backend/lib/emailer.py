@@ -1,30 +1,39 @@
-"""Direct Resend email integration — async, non-blocking, and gated.
+"""Gmail SMTP email integration — async, non-blocking, and gated.
 
 Guardrails (G1-G5) are enforced by construction: recipients come from server-side user
 records (never request input), bodies from the fixed templates below, links point only at
 this app's own APP_URL over https, and every send passes _assert_safe_email first.
 """
 
+import asyncio
+import hashlib
 import ipaddress
 import logging
 import os
 import re
+import smtplib
+import ssl
+from email.message import EmailMessage
+from email.utils import formataddr, make_msgid
 from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
 
-import httpx
 from dotenv import load_dotenv
 from fastapi import HTTPException
+from lib.observability import log_event
 
 load_dotenv(Path(__file__).parent.parent / ".env")
 logger = logging.getLogger(__name__)
 
-RESEND_API_URL = "https://api.resend.com/emails"
-RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "").strip()
-FROM_EMAIL = os.environ.get("FROM_EMAIL", "").strip()
-EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME", "180Days")
+SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.gmail.com").strip()
+SMTP_PORT = os.environ.get("SMTP_PORT", "587").strip()
+SMTP_USERNAME = os.environ.get("SMTP_USERNAME", "").strip()
+SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "").strip().replace(" ", "")
+SMTP_FROM_EMAIL = os.environ.get("SMTP_FROM_EMAIL", "").strip()
+SMTP_FROM_NAME = os.environ.get("SMTP_FROM_NAME", "180Days").strip() or "180Days"
+SMTP_USE_TLS = os.environ.get("SMTP_USE_TLS", "true").strip().lower()
 APP_URL = os.environ.get("APP_URL", "").rstrip("/")
 
 _SHORTENERS = (
@@ -54,6 +63,7 @@ _CRED_ASK = (
 _HOSTISH = re.compile(
     r"\b(?:https?://)?((?:[a-z0-9-]+\.)+[a-z]{2,})", re.I
 )  # host-looking text
+_RESERVED_EMAIL_DOMAINS = ("example.com", "example.net", "example.org")
 
 
 def _host_ok(host: str) -> bool:
@@ -70,6 +80,14 @@ def _host_ok(host: str) -> bool:
 
 def _same_site(shown: str, real: str) -> bool:
     return shown == real or real.endswith("." + shown) or shown.endswith("." + real)
+
+
+def _is_test_recipient(address: str) -> bool:
+    domain = address.rpartition("@")[2].lower().rstrip(".")
+    return domain.endswith((".test", ".invalid", ".localhost")) or any(
+        domain == reserved or domain.endswith("." + reserved)
+        for reserved in _RESERVED_EMAIL_DOMAINS
+    )
 
 
 class _EmailScan(HTMLParser):
@@ -93,6 +111,25 @@ class _EmailScan(HTMLParser):
         if tag.lower() == "a" and self._href is not None:
             self.anchors.append((self._href, "".join(self._text)))
             self._href, self._text = None, []
+
+
+class _EmailText(HTMLParser):
+    _BLOCK_TAGS = {"br", "div", "h1", "h2", "h3", "li", "p", "tr"}
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts: list[str] = []
+
+    def handle_starttag(self, tag, _attrs):
+        if tag.lower() in self._BLOCK_TAGS:
+            self.parts.append("\n")
+
+    def handle_endtag(self, tag):
+        if tag.lower() in self._BLOCK_TAGS:
+            self.parts.append("\n")
+
+    def handle_data(self, data):
+        self.parts.append(data)
 
 
 def _assert_safe_email(subject: str, html: str) -> None:
@@ -127,66 +164,167 @@ def _assert_safe_email(subject: str, html: str) -> None:
                 )
 
 
+def _plain_text(html: str) -> str:
+    parser = _EmailText()
+    parser.feed(html)
+    text = "".join(parser.parts)
+    text = re.sub(r"[ \t]+\n", "\n", text)
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def _smtp_configuration() -> tuple[str, int, str, str, str, str]:
+    missing = [
+        name
+        for name, value in (
+            ("SMTP_HOST", SMTP_HOST),
+            ("SMTP_USERNAME", SMTP_USERNAME),
+            ("SMTP_PASSWORD", SMTP_PASSWORD),
+            ("SMTP_FROM_EMAIL", SMTP_FROM_EMAIL),
+        )
+        if not value
+    ]
+    try:
+        port = int(SMTP_PORT)
+    except ValueError:
+        port = 0
+    if port != 587:
+        missing.append("SMTP_PORT")
+    if SMTP_USE_TLS not in {"true", "1", "yes"}:
+        missing.append("SMTP_USE_TLS")
+    app_host = urlparse(APP_URL).hostname
+    if (
+        not APP_URL.startswith("https://")
+        or not app_host
+        or app_host in {"localhost", "127.0.0.1", "::1"}
+    ):
+        missing.append("APP_URL")
+    if missing:
+        log_event(
+            logger,
+            logging.WARNING,
+            "email.smtp_configuration_missing",
+            error_code="smtp_not_configured",
+            missing_variables=sorted(set(missing)),
+        )
+        raise HTTPException(
+            status_code=503,
+            detail="Email delivery is not configured in this environment.",
+        )
+    return (
+        SMTP_HOST,
+        port,
+        SMTP_USERNAME,
+        SMTP_PASSWORD,
+        SMTP_FROM_EMAIL,
+        SMTP_FROM_NAME or "180Days",
+    )
+
+
+def _message_id(idempotency_key: str | None) -> str:
+    domain = urlparse(APP_URL).hostname or "localhost"
+    if idempotency_key:
+        digest = hashlib.sha256(idempotency_key.encode()).hexdigest()
+        return f"<{digest}@{domain}>"
+    return make_msgid(domain=domain)
+
+
+def _send_smtp(
+    *,
+    to: str,
+    subject: str,
+    html: str,
+    idempotency_key: str | None,
+    configuration: tuple[str, int, str, str, str, str],
+) -> str:
+    host, port, username, password, from_email, from_name = configuration
+    message = EmailMessage()
+    message["Subject"] = subject
+    message["From"] = formataddr((from_name, from_email))
+    message["To"] = to
+    message["Message-ID"] = _message_id(idempotency_key)
+    message.set_content(_plain_text(html))
+    message.add_alternative(html, subtype="html")
+
+    with smtplib.SMTP(host, port, timeout=15) as client:
+        client.ehlo()
+        client.starttls(context=ssl.create_default_context())
+        client.ehlo()
+        client.login(username, password)
+        refused = client.send_message(message)
+        if refused:
+            raise smtplib.SMTPRecipientsRefused(refused)
+    return message["Message-ID"]
+
+
 async def send_email(
     *,
     to: str,
     subject: str,
     html: str,
     idempotency_key: str | None = None,
-) -> str | None:
-    """Send one transactional email through Resend; return None when unconfigured."""
-    if (
-        not APP_URL.startswith("https://")
-        or urlparse(APP_URL).hostname in {"localhost", "127.0.0.1", "::1"}
-        or not RESEND_API_KEY
-        or not FROM_EMAIL
-    ):
-        logger.warning(
-            "Email skipped: HTTPS app URL, Resend key, or sender is not configured"
+) -> str:
+    """Deliver one transactional email over SMTP with STARTTLS."""
+    if _is_test_recipient(to):
+        log_event(
+            logger,
+            logging.WARNING,
+            "email.reserved_test_recipient",
+            error_code="reserved_test_recipient",
+            status_code=503,
         )
-        return None
-    _assert_safe_email(subject, html)  # G2-G3 gate — never skip for an actual send
-    payload = {
-        "from": FROM_EMAIL,
-        "to": [to],
-        "subject": subject,
-        "html": html,
-    }
-    headers = {"Authorization": f"Bearer {RESEND_API_KEY}"}
-    if idempotency_key:
-        headers["Idempotency-Key"] = idempotency_key
+        raise HTTPException(
+            status_code=503,
+            detail="Email delivery is unavailable for this address.",
+        )
+    configuration = _smtp_configuration()
     try:
-        async with httpx.AsyncClient(timeout=30) as client:
-            resp = await client.post(RESEND_API_URL, headers=headers, json=payload)
-        resp.raise_for_status()
-        result = resp.json()
-        if not isinstance(result, dict) or not isinstance(result.get("id"), str):
-            logger.error("Resend returned a successful response without an email id")
-            raise HTTPException(
-                status_code=502, detail="Invalid email provider response"
-            )
-        return result["id"]
-    except httpx.HTTPStatusError as exc:
-        status = exc.response.status_code
-        if status == 429 or status >= 500:
-            logger.warning("Resend temporarily unavailable (HTTP %s)", status)
-            raise HTTPException(
-                status_code=503, detail="Email is temporarily unavailable"
-            ) from exc
-        logger.error("Resend rejected an email request (HTTP %s)", status)
-        raise HTTPException(status_code=502, detail="Failed to send email")
-    except httpx.RequestError as exc:
-        logger.error("Resend request failed: %s", type(exc).__name__)
-        raise HTTPException(
-            status_code=503, detail="Email is temporarily unavailable"
-        ) from exc
-    except HTTPException:
-        raise
+        _assert_safe_email(subject, html)
     except ValueError as exc:
-        logger.error("Resend returned invalid JSON")
+        log_event(
+            logger,
+            logging.ERROR,
+            "email.template_rejected",
+            error_code="invalid_email_template",
+            exception_type=type(exc).__name__,
+            status_code=502,
+        )
         raise HTTPException(
-            status_code=502, detail="Invalid email provider response"
-        ) from exc
+            status_code=502, detail="Unable to prepare email content."
+        ) from None
+
+    try:
+        return await asyncio.to_thread(
+            _send_smtp,
+            to=to,
+            subject=subject,
+            html=html,
+            idempotency_key=idempotency_key,
+            configuration=configuration,
+        )
+    except smtplib.SMTPAuthenticationError as exc:
+        log_event(
+            logger,
+            logging.ERROR,
+            "email.smtp_authentication_failed",
+            error_code="smtp_authentication_failed",
+            exception_type=type(exc).__name__,
+            status_code=503,
+        )
+        raise HTTPException(
+            status_code=503, detail="Email delivery is temporarily unavailable."
+        ) from None
+    except (smtplib.SMTPException, OSError, TimeoutError, ssl.SSLError) as exc:
+        log_event(
+            logger,
+            logging.ERROR,
+            "email.smtp_delivery_failed",
+            error_code="smtp_delivery_failed",
+            exception_type=type(exc).__name__,
+            status_code=503,
+        )
+        raise HTTPException(
+            status_code=503, detail="Email delivery is temporarily unavailable."
+        ) from None
 
 
 # --- Fixed server-side templates (G4): recipients from user records, never request input ---
@@ -208,7 +346,7 @@ def _shell(title: str, body_html: str) -> str:
         f'<tr><td style="font-size:15px;line-height:1.6;color:#CBD5E1;padding-bottom:24px">'
         f"{body_html}</td></tr>"
         '<tr><td style="font-size:12px;color:#64748B;border-top:1px solid #1E293B;padding-top:16px">'
-        f"Sent by {escape(EMAIL_FROM_NAME)}. We never ask for your password or card details "
+        f"Sent by {escape(SMTP_FROM_NAME)}. We never ask for your password or card details "
         "by email.</td></tr>"
         "</table></td></tr></table>"
     )
@@ -237,16 +375,46 @@ def verification_email(name: str, token: str) -> tuple[str, str]:
 
 
 def verification_code_email(name: str, code: str) -> tuple[str, str]:
-    subject = "Your 180Days verification code"
-    body = (
-        f"<p>Hi {escape(name)}, welcome to 180Days!</p>"
-        "<p>Enter this one-time code to verify your email address:</p>"
-        f'<p style="font-size:32px;font-weight:bold;letter-spacing:8px;color:#14B8A6">'
-        f"{escape(code)}</p>"
-        "<p>This code expires in 10 minutes and can only be used once. "
-        "If you did not create an account, you can ignore this email.</p>"
-    )
-    return subject, _shell("Verify your email", body)
+    subject = "Your 180Days Verification Code"
+    safe_name = escape(name)
+    safe_code = escape(code)
+    app_link = escape(f"{APP_URL}/", quote=True)
+    html = f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{escape(subject)}</title>
+</head>
+<body style="margin:0;padding:0;background:#f3f5fb;font-family:Arial,Helvetica,sans-serif;color:#172033">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f3f5fb;padding:24px 12px">
+    <tr><td align="center">
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden">
+        <tr><td style="background:#101a3a;padding:25px 32px">
+          <a href="{app_link}" style="color:#ffffff;text-decoration:none;font-size:20px;font-weight:700;letter-spacing:2px">180DAYS</a>
+        </td></tr>
+        <tr><td style="padding:32px 32px 24px;font-size:16px;line-height:1.6">
+          <h1 style="margin:0 0 20px;font-size:24px;line-height:1.3;color:#172033">Verify your email</h1>
+          <p style="margin:0 0 16px">Hey {safe_name}!</p>
+          <p style="margin:0 0 16px">Welcome to 180Days! We're excited to have you on board.</p>
+          <p style="margin:0 0 24px">Use the verification code below to verify your email address and secure your account.</p>
+          <p style="margin:0 0 8px;font-size:14px;font-weight:600;color:#4b5568">Your verification code:</p>
+          <div style="margin:0 0 22px;padding:18px 12px;border-radius:12px;background:#eef0ff;text-align:center">
+            <span style="font-size:32px;font-weight:700;letter-spacing:8px;color:#3730a3">{safe_code}</span>
+          </div>
+          <p style="margin:0 0 12px">This code is valid for <strong>10 minutes</strong>. Please don't share it with anyone.</p>
+          <p style="margin:0 0 20px;color:#4b5568">If you didn't request this verification code, you can safely ignore this email.</p>
+          <p style="margin:0">Keep showing up. Your journey matters.</p>
+        </td></tr>
+        <tr><td style="padding:18px 32px;background:#f8f9fd;border-top:1px solid #e8eaf2;font-size:13px;line-height:1.5;color:#596174">
+          Team 180Days — Build Your Next 180 Days.
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>"""
+    return subject, html
 
 
 def password_reset_email(name: str, token: str) -> tuple[str, str]:

@@ -20,6 +20,11 @@ export interface AuthOut {
   verification_email_sent?: boolean | null;
 }
 
+export interface LoginChallengeOut {
+  message: string;
+  email: string;
+}
+
 export interface MessageOut {
   message: string;
 }
@@ -322,6 +327,12 @@ export interface SignupBody {
 export interface LoginBody {
   email: string;
   password: string;
+  remember: boolean;
+}
+
+export interface LoginVerifyBody {
+  email: string;
+  code: string;
   remember: boolean;
 }
 

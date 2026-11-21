@@ -87,6 +87,7 @@ def test_email_verification_code_requires_login_and_rejects_invalid_code(client)
         anonymous.post("/auth/verify-email-code", json={"code": "123456"}).status_code
         == 401
     )
+    assert anonymous.post("/auth/resend-verification").status_code == 401
 
     _, _, signup = _signup(client)
     assert signup.status_code == 201
@@ -94,7 +95,11 @@ def test_email_verification_code_requires_login_and_rejects_invalid_code(client)
     assert invalid.status_code == 400
 
     resend = client.post("/auth/resend-verification")
-    assert resend.status_code == 503
+    assert resend.status_code in {200, 503}
+    if resend.status_code == 200:
+        response = resend.json()
+        assert "verification_code" not in response
+        assert set(response) == {"message"}
 
 
 def test_change_password_revokes_other_sessions(client):

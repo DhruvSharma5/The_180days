@@ -32,10 +32,16 @@ export default function Login() {
   const onSubmit = async (values: FormValues) => {
     setFormError("");
     try {
-      await login(values);
-      toast.success("Welcome back!");
-      const next = (location.state as { next?: string } | null)?.next;
-      navigate(next && next !== "/onboarding" ? next : "/dashboard", { replace: true });
+      const challenge = await login(values);
+      toast.success(challenge.message);
+      navigate("/verify-login", {
+        replace: true,
+        state: {
+          email: challenge.email,
+          remember: values.remember,
+          next: (location.state as { next?: string } | null)?.next,
+        },
+      });
     } catch (err) {
       const message = detailOf(err) ?? (err instanceof ApiError ? "Sign in failed" : "Sign in failed");
       setFormError(message);

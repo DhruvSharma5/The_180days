@@ -44,10 +44,13 @@ that proxy target; this file is ignored by Git.
 
 ## Email in local development
 
-Email sending is intentionally disabled unless `RESEND_API_KEY`, `FROM_EMAIL`,
-and a public HTTPS `APP_URL` are configured. Local signup still works, but no
-verification or password-reset email is sent. Resend configuration is documented
-in [DEPLOYMENT.md](./DEPLOYMENT.md).
+Email sending requires the SMTP variables in `backend/.env` and a public HTTPS
+`APP_URL`. The example local `APP_URL` uses HTTP loopback, so delivery is
+disabled by default; local signup still works and reports whether a verification
+email was sent. Do not expose OTPs through an API response. Automated mailer
+tests mock SMTP and do not send real emails; reserved example/test domains are
+also refused by the mailer. Gmail SMTP/Vercel configuration is documented in
+[DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## Tests and builds
 

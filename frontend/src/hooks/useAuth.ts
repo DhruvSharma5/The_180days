@@ -3,7 +3,8 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiGet, apiPatch, apiPost } from "@/lib/api";
 import { beginSession } from "@/lib/session";
 import type {
-  AuthOut, ChangePasswordBody, LoginBody, MessageOut, ProfileUpdateBody,
+  AuthOut, ChangePasswordBody, LoginBody, LoginChallengeOut, LoginVerifyBody,
+  MessageOut, ProfileUpdateBody,
   ResetBody, SignupBody, UserOut,
 } from "@/types";
 
@@ -36,16 +37,21 @@ export function useSignup() {
 }
 
 export function useLogin() {
+  return useMutation({
+    mutationFn: (body: LoginBody) => apiPost<LoginChallengeOut>("/auth/login", body),
+  });
+}
+
+export function useVerifyLoginCode() {
   const invalidateMe = useInvalidateMe();
   return useMutation({
-    mutationFn: (body: LoginBody) => apiPost<AuthOut>("/auth/login", body),
+    mutationFn: (body: LoginVerifyBody) => apiPost<AuthOut>("/auth/verify-login-code", body),
     onSuccess: () => {
       beginSession();
       invalidateMe();
     },
   });
 }
-
 export function useLogout() {
   return useMutation({ mutationFn: () => apiPost<MessageOut>("/auth/logout") });
 }

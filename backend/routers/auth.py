@@ -34,7 +34,9 @@ from models.models import (
     AuthOut,
     ChangePasswordIn,
     ForgotIn,
+    LoginChallengeOut,
     LoginIn,
+    LoginVerifyIn,
     MessageOut,
     ResetIn,
     SignupIn,
@@ -58,8 +60,9 @@ def password_problem(password: str) -> str | None:
     return None
 
 
-async def issue_email_token(user_id: str, purpose: str, hours: float) -> str:
-    token = new_token()
+async def store_email_token(
+    token: str, user_id: str, purpose: str, hours: float
+) -> None:
     await db.email_tokens.insert_one(
         {
             "token_hash": token_sha256(token),
@@ -70,6 +73,11 @@ async def issue_email_token(user_id: str, purpose: str, hours: float) -> str:
             "created_at": utcnow(),
         }
     )
+
+
+async def issue_email_token(user_id: str, purpose: str, hours: float) -> str:
+    token = new_token()
+    await store_email_token(token, user_id, purpose, hours)
     return token
 
 
@@ -86,12 +94,15 @@ async def consume_email_token(token: str, purpose: str) -> dict | None:
     return doc
 
 
-async def issue_verification_code(user_id: str) -> str:
+def generate_verification_code() -> str:
+    return f"{secrets.randbelow(1_000_000):06d}"
+
+
+async def store_verification_code(user_id: str, code: str) -> None:
     await db.email_tokens.update_many(
         {"user_id": user_id, "purpose": "verify", "used": False},
         {"$set": {"used": True}},
     )
-    code = f"{secrets.randbelow(1_000_000):06d}"
     await db.email_tokens.insert_one(
         {
             "token_hash": verification_code_hash(code),
@@ -102,7 +113,29 @@ async def issue_verification_code(user_id: str) -> str:
             "created_at": utcnow(),
         }
     )
+
+
+async def issue_verification_code(user_id: str) -> str:
+    code = generate_verification_code()
+    await store_verification_code(user_id, code)
     return code
+
+
+async def store_login_code(user_id: str, code: str) -> None:
+    await db.email_tokens.update_many(
+        {"user_id": user_id, "purpose": "login", "used": False},
+        {"$set": {"used": True}},
+    )
+    await db.email_tokens.insert_one(
+        {
+            "token_hash": verification_code_hash(code),
+            "user_id": user_id,
+            "purpose": "login",
+            "used": False,
+            "expires_at": datetime.now(timezone.utc) + timedelta(minutes=10),
+            "created_at": utcnow(),
+        }
+    )
 
 
 async def consume_verification_code(user_id: str, code: str) -> dict | None:
@@ -165,11 +198,11 @@ async def signup(body: SignupIn, request: Request, response: Response):
     await db.users.insert_one(user_doc)
     verification_email_sent = False
     try:
-        code = await issue_verification_code(user_doc["id"])
+        code = generate_verification_code()
         subject, html = verification_code_email(user_doc["name"], code)
-        verification_email_sent = (
-            await send_email(to=email, subject=subject, html=html)
-        ) is not None
+        await send_email(to=email, subject=subject, html=html)
+        await store_verification_code(user_doc["id"], code)
+        verification_email_sent = True
     except HTTPException as exc:
         log_event(
             logger,
@@ -185,20 +218,67 @@ async def signup(body: SignupIn, request: Request, response: Response):
     )
 
 
-@router.post("/login", response_model=AuthOut)
-async def login(body: LoginIn, request: Request, response: Response):
+@router.post("/login", response_model=LoginChallengeOut)
+async def login(body: LoginIn, request: Request):
     rate_limit("login", request)
     email = body.email.lower().strip()
     user = await db.users.find_one({"email": email}, {"_id": 0})
     if not user or not verify_password(body.password, user.get("password_hash", "")):
         raise HTTPException(status_code=401, detail="Invalid email or password")
-    await db.users.update_one({"id": user["id"]}, {"$set": {"last_login_at": utcnow()}})
+    code = generate_verification_code()
+    subject, html = verification_code_email(user["name"], code)
+    try:
+        await send_email(to=email, subject=subject, html=html)
+        await store_login_code(user["id"], code)
+    except HTTPException as exc:
+        log_event(
+            logger,
+            logging.WARNING,
+            "email.login_otp_unavailable",
+            status_code=exc.status_code,
+        )
+        raise
+    return LoginChallengeOut(
+        message="Sign-in verification code sent — check your inbox.",
+        email=email,
+    )
+
+
+@router.post("/verify-login-code", response_model=AuthOut)
+async def verify_login_code(
+    body: LoginVerifyIn,
+    request: Request,
+    response: Response,
+):
+    rate_limit("verify", request)
+    email = body.email.lower().strip()
+    user = await db.users.find_one({"email": email}, {"_id": 0})
+    if not user:
+        raise HTTPException(status_code=400, detail="Invalid or expired sign-in code")
+    doc = await db.email_tokens.find_one_and_update(
+        {
+            "token_hash": verification_code_hash(body.code),
+            "user_id": user["id"],
+            "purpose": "login",
+            "used": False,
+            "expires_at": {"$gt": datetime.now(timezone.utc)},
+        },
+        {"$set": {"used": True}},
+    )
+    if not doc:
+        raise HTTPException(status_code=400, detail="Invalid or expired sign-in code")
+    await db.users.update_one(
+        {"id": user["id"]},
+        {"$set": {"email_verified": True, "last_login_at": utcnow()}},
+    )
     fresh, max_age = create_session_token(
         user["id"],
         remember=body.remember,
         session_epoch=user.get("session_epoch", 0),
     )
     set_session_cookie(response, fresh, max_age, request)
+    user["email_verified"] = True
+    user["last_login_at"] = utcnow()
     return AuthOut(user=user_out(user))
 
 
@@ -223,9 +303,10 @@ async def forgot_password(body: ForgotIn, request: Request):
     user = await db.users.find_one({"email": email}, {"_id": 0})
     if user:  # response is identical either way — no account enumeration
         try:
-            token = await issue_email_token(user["id"], "reset", 1)
+            token = new_token()
             subject, html = password_reset_email(user["name"], token)
             await send_email(to=email, subject=subject, html=html)
+            await store_email_token(token, user["id"], "reset", 1)
         except HTTPException as exc:
             log_event(
                 logger,
@@ -289,15 +370,19 @@ async def verify_email_code(
     return MessageOut(message="Email verified — your account is fully activated.")
 
 
-@router.post("/resend-verification", response_model=MessageOut)
+@router.post(
+    "/resend-verification",
+    response_model=MessageOut,
+)
 async def resend_verification(request: Request, user: User = Depends(get_current_user)):
     rate_limit("resend", request)
     if user.email_verified:
         return MessageOut(message="Your email is already verified.")
     try:
-        code = await issue_verification_code(user.id)
+        code = generate_verification_code()
         subject, html = verification_code_email(user.name, code)
-        sent = await send_email(to=user.email, subject=subject, html=html)
+        await send_email(to=user.email, subject=subject, html=html)
+        await store_verification_code(user.id, code)
     except HTTPException as exc:
         log_event(
             logger,
@@ -306,11 +391,6 @@ async def resend_verification(request: Request, user: User = Depends(get_current
             status_code=exc.status_code,
         )
         raise
-    if sent is None:
-        raise HTTPException(
-            status_code=503,
-            detail="Email delivery is not configured in this environment.",
-        )
     return MessageOut(message="Verification email sent — check your inbox.")
 
 

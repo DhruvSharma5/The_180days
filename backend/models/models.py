@@ -31,6 +31,17 @@ class LoginIn(BaseModel):
     remember: bool = True
 
 
+class LoginChallengeOut(BaseModel):
+    message: str
+    email: str
+
+
+class LoginVerifyIn(BaseModel):
+    email: EmailStr
+    code: str = Field(pattern=r"^\d{6}$")
+    remember: bool = True
+
+
 class ForgotIn(BaseModel):
     email: EmailStr
 
