@@ -14,6 +14,7 @@ from lib.auth import (
     clear_session_cookie,
     create_session_token,
     get_current_user,
+    get_current_user_allow_unverified,
     hash_password,
     new_token,
     rate_limit,
@@ -289,7 +290,7 @@ async def logout(request: Request, response: Response):
 
 
 @router.get("/me", response_model=UserOut)
-async def me(user: User = Depends(get_current_user)):
+async def me(user: User = Depends(get_current_user_allow_unverified)):
     doc = await db.users.find_one({"id": user.id}, {"_id": 0})
     if not doc:
         raise HTTPException(status_code=401, detail="Account no longer exists")
@@ -356,7 +357,7 @@ async def verify_email(body: TokenIn, request: Request):
 async def verify_email_code(
     body: VerificationCodeIn,
     request: Request,
-    user: User = Depends(get_current_user),
+    user: User = Depends(get_current_user_allow_unverified),
 ):
     rate_limit("verify", request)
     if user.email_verified:
@@ -374,7 +375,10 @@ async def verify_email_code(
     "/resend-verification",
     response_model=MessageOut,
 )
-async def resend_verification(request: Request, user: User = Depends(get_current_user)):
+async def resend_verification(
+    request: Request,
+    user: User = Depends(get_current_user_allow_unverified),
+):
     rate_limit("resend", request)
     if user.email_verified:
         return MessageOut(message="Your email is already verified.")

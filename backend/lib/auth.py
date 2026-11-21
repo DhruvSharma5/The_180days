@@ -122,8 +122,12 @@ def new_token() -> str:
     return uuid.uuid4().hex + uuid.uuid4().hex
 
 
-async def get_current_user(request: Request, response: Response) -> User:
-    """Auth dependency — decode the session cookie, re-read the user from Mongo."""
+async def _get_current_user(
+    request: Request,
+    response: Response,
+    *,
+    allow_unverified: bool,
+) -> User:
     from lib.db import db  # local import avoids a circular import at module load
 
     token = request.cookies.get(SESSION_COOKIE)
@@ -139,6 +143,8 @@ async def get_current_user(request: Request, response: Response) -> User:
         raise HTTPException(status_code=401, detail="Account no longer exists")
     if claims.get("session_epoch", 0) != user.get("session_epoch", 0):
         raise HTTPException(status_code=401, detail="Session expired")
+    if not user.get("email_verified", False) and not allow_unverified:
+        raise HTTPException(status_code=403, detail="Email verification required")
     # Sliding refresh: keep active sessions alive without a separate refresh endpoint.
     try:
         iat = datetime.fromtimestamp(int(claims["iat"]), tz=timezone.utc)
@@ -159,6 +165,18 @@ async def get_current_user(request: Request, response: Response) -> User:
         email_verified=user.get("email_verified", False),
         timezone=user.get("timezone", "UTC"),
     )
+
+
+async def get_current_user(request: Request, response: Response) -> User:
+    """Require a valid session and a verified email address."""
+    return await _get_current_user(request, response, allow_unverified=False)
+
+
+async def get_current_user_allow_unverified(
+    request: Request, response: Response
+) -> User:
+    """Allow pending users to read their account and complete email verification."""
+    return await _get_current_user(request, response, allow_unverified=True)
 
 
 async def require_admin(user: User = Depends(get_current_user)) -> User:

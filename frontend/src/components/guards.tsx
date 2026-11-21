@@ -16,12 +16,13 @@ export function FullLoader({ label = "Loading" }: { label?: string }) {
 }
 
 export function Protected() {
-  const { isLoading, isError } = useMe();
+  const { isLoading, isError, data: me } = useMe();
   const location = useLocation();
   if (isLoading) return <FullLoader label="Checking your session" />;
-  if (isError) {
+  if (isError || !me) {
     return <Navigate to="/login" state={{ next: location.pathname }} replace />;
   }
+  if (!me.email_verified) return <Navigate to="/verify-email" replace />;
   return <Outlet />;
 }
 
@@ -51,8 +52,15 @@ export function AdminOnly({ children }: { children: ReactNode }) {
 }
 
 export function GuestOnly() {
-  const { isLoading, isError } = useMe();
+  const { isLoading, isError, data: me } = useMe();
   if (isLoading) return <FullLoader label="Loading" />;
-  if (!isError) return <Navigate to="/dashboard" replace />;
+  if (!isError && me) {
+    return (
+      <Navigate
+        to={me.email_verified ? "/dashboard" : "/verify-email"}
+        replace
+      />
+    );
+  }
   return <Outlet />;
 }

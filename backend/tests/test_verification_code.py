@@ -7,7 +7,13 @@ from fastapi import HTTPException
 from starlette.requests import Request
 from starlette.responses import Response
 
-from lib.auth import JWT_ALG, JWT_SECRET, _BUCKETS, verification_code_hash, verify_password
+from lib.auth import (
+    JWT_ALG,
+    JWT_SECRET,
+    _BUCKETS,
+    verification_code_hash,
+    verify_password,
+)
 from routers import auth
 
 
@@ -48,10 +54,16 @@ class FakeUsers:
             "email": "user@example.com",
             "password_hash": auth.hash_password("OldPassw0rd"),
             "session_epoch": 0,
+            "email_verified": False,
         }
 
     async def find_one(self, query, *_):
-        return self.user.copy() if query.get("email") == self.user["email"] else None
+        if (
+            query.get("email") == self.user["email"]
+            or query.get("id") == self.user["id"]
+        ):
+            return self.user.copy()
+        return None
 
     async def update_one(self, query, update):
         self.updates.append((query, update))
@@ -237,6 +249,30 @@ async def test_pre_otp_session_cookie_is_rejected():
         await auth.get_current_user(Request(scope), Response())
 
     assert exc_info.value.status_code == 401
+
+
+@pytest.mark.asyncio
+async def test_unverified_session_is_limited_to_verification_endpoints(monkeypatch):
+    users = FakeUsers()
+    monkeypatch.setattr(auth.db, "users", users)
+    token, _ = auth.create_session_token("user-1", session_epoch=0)
+    scope = _request().scope
+    scope["headers"] = [(b"cookie", f"sid={token}".encode())]
+
+    with pytest.raises(HTTPException) as exc_info:
+        await auth.get_current_user(Request(scope), Response())
+    assert exc_info.value.status_code == 403
+    assert exc_info.value.detail == "Email verification required"
+
+    pending_user = await auth.get_current_user_allow_unverified(
+        Request(scope), Response()
+    )
+    assert pending_user.email_verified is False
+
+    users.user["email_verified"] = True
+    verified_user = await auth.get_current_user(Request(scope), Response())
+    assert verified_user.email_verified is True
+
 
 @pytest.mark.asyncio
 async def test_resend_verification_is_rate_limited(monkeypatch):
