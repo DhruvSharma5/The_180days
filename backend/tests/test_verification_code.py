@@ -1,12 +1,13 @@
 from collections import deque
 from datetime import datetime, timedelta, timezone
 
+import jwt
 import pytest
 from fastapi import HTTPException
 from starlette.requests import Request
 from starlette.responses import Response
 
-from lib.auth import _BUCKETS, verification_code_hash, verify_password
+from lib.auth import JWT_ALG, JWT_SECRET, _BUCKETS, verification_code_hash, verify_password
 from routers import auth
 
 
@@ -213,6 +214,29 @@ async def test_login_rejects_incorrect_otp(monkeypatch):
         )
 
     assert exc_info.value.status_code == 400
+
+
+@pytest.mark.asyncio
+async def test_pre_otp_session_cookie_is_rejected():
+    now = datetime.now(timezone.utc)
+    legacy_token = jwt.encode(
+        {
+            "sub": "user-1",
+            "iat": now,
+            "exp": now + timedelta(days=1),
+            "typ": "session",
+            "session_epoch": 0,
+        },
+        JWT_SECRET,
+        algorithm=JWT_ALG,
+    )
+    scope = _request().scope
+    scope["headers"] = [(b"cookie", f"sid={legacy_token}".encode())]
+
+    with pytest.raises(HTTPException) as exc_info:
+        await auth.get_current_user(Request(scope), Response())
+
+    assert exc_info.value.status_code == 401
 
 @pytest.mark.asyncio
 async def test_resend_verification_is_rate_limited(monkeypatch):

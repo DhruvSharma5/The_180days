@@ -54,6 +54,7 @@ def create_session_token(
         "iat": now,
         "exp": now + timedelta(days=days),
         "typ": "session",
+        "otp_verified": True,
         "remember": remember,
         "session_epoch": session_epoch,
     }
@@ -131,6 +132,8 @@ async def get_current_user(request: Request, response: Response) -> User:
     claims = decode_token(token)
     if not claims or claims.get("typ") != "session":
         raise HTTPException(status_code=401, detail="Session expired")
+    if claims.get("otp_verified") is not True:
+        raise HTTPException(status_code=401, detail="Sign-in verification required")
     user = await db.users.find_one({"id": claims["sub"]}, {"_id": 0})
     if not user:
         raise HTTPException(status_code=401, detail="Account no longer exists")
